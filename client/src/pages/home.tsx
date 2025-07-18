@@ -252,7 +252,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="hero-gradient min-h-screen flex items-center justify-center text-white relative overflow-hidden">
+      <section className="hero-gradient h-[70vh] flex items-center justify-center text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-6 text-center relative z-10">
           <motion.div
