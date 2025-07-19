@@ -70,36 +70,6 @@ export default function Home() {
       description: "E-commerce platform with seamless checkout and inventory management",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
       liveUrl: "#"
-    },
-    {
-      companyName: "Sterling & Associates",
-      description: "Professional corporate website with client portal and service showcase",
-      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      liveUrl: "#"
-    },
-    {
-      companyName: "Maya Chen Creative",
-      description: "Creative portfolio showcase with interactive galleries and project details",
-      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      liveUrl: "#"
-    },
-    {
-      companyName: "Bella Vista Bistro",
-      description: "Restaurant website with online ordering and reservation system",
-      image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      liveUrl: "#"
-    },
-    {
-      companyName: "InnovateAI",
-      description: "Tech startup landing page with product demos and investor information",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      liveUrl: "#"
-    },
-    {
-      companyName: "Serenity Wellness",
-      description: "Wellness center website with appointment booking and service information",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      liveUrl: "#"
     }
   ];
 
@@ -406,7 +376,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex justify-center">
             {portfolioItems.map((item, index) => (
               <motion.div
                 key={item.companyName}
@@ -414,7 +384,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden max-w-md"
               >
                 <div className="relative overflow-hidden">
                   <img
