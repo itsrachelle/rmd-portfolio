@@ -26,12 +26,12 @@
   --ring: hsl(217, 91%, 60%);
   --radius: 0.5rem;
   
-  /* Custom colors for the design */
-  --primary-blue: hsl(217, 91%, 60%);
-  --secondary-dark: hsl(220, 13%, 18%);
-  --accent-green: hsl(158, 64%, 52%);
-  --hero-gradient-from: hsl(235, 84%, 71%);
-  --hero-gradient-to: hsl(270, 31%, 56%);
+  /* Custom colors for the design - Nude and Brown scheme */
+  --primary-brown: hsl(25, 35%, 45%);
+  --secondary-dark: hsl(20, 20%, 25%);
+  --accent-nude: hsl(35, 25%, 65%);
+  --hero-gradient-from: hsl(30, 40%, 55%);
+  --hero-gradient-to: hsl(20, 30%, 40%);
 }
 
 .dark {

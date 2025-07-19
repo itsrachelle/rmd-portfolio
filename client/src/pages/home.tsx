@@ -194,13 +194,13 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-amber-50">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="text-2xl font-bold text-[hsl(var(--secondary-dark))]">
-              <span className="text-[hsl(var(--primary-blue))]">Design</span>Pro
+              <span className="text-[hsl(var(--primary-brown))]">Design</span>Pro
             </div>
             
             {/* Desktop Navigation */}
@@ -209,8 +209,8 @@ export default function Home() {
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className={`text-gray-600 hover:text-[hsl(var(--primary-blue))] transition-colors duration-200 ${
-                    activeSection === item.href.replace("#", "") ? "text-[hsl(var(--primary-blue))]" : ""
+                  className={`text-gray-600 hover:text-[hsl(var(--primary-brown))] transition-colors duration-200 ${
+                    activeSection === item.href.replace("#", "") ? "text-[hsl(var(--primary-brown))]" : ""
                   }`}
                 >
                   {item.label}
@@ -221,7 +221,7 @@ export default function Home() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden text-gray-600 hover:text-[hsl(var(--primary-blue))]"
+              className="md:hidden text-gray-600 hover:text-[hsl(var(--primary-brown))]"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -242,7 +242,7 @@ export default function Home() {
                   <button
                     key={item.href}
                     onClick={() => scrollToSection(item.href)}
-                    className="block w-full text-left text-gray-600 hover:text-[hsl(var(--primary-blue))] transition-colors duration-200"
+                    className="block w-full text-left text-gray-600 hover:text-[hsl(var(--primary-brown))] transition-colors duration-200"
                   >
                     {item.label}
                   </button>
@@ -270,7 +270,7 @@ export default function Home() {
             <Button
               onClick={() => scrollToSection("#portfolio")}
               size="lg"
-              className="bg-white text-[hsl(var(--primary-blue))] hover:bg-gray-100 px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-white text-[hsl(var(--primary-brown))] hover:bg-gray-100 px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
             >
               See My Work <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -334,7 +334,7 @@ export default function Home() {
         </div>
       </section>
       {/* Services Section */}
-      <section id="services" className="py-20 bg-gray-50">
+      <section id="services" className="py-20 bg-stone-100">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -361,7 +361,7 @@ export default function Home() {
                 whileHover={{ y: -8 }}
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <div className="text-[hsl(var(--primary-blue))] mb-6">
+                <div className="text-[hsl(var(--primary-brown))] mb-6">
                   <service.icon size={48} />
                 </div>
                 <h3 className="text-xl font-semibold text-[hsl(var(--secondary-dark))] mb-4">
@@ -373,7 +373,7 @@ export default function Home() {
                 <ul className="space-y-2 text-sm text-gray-600">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center">
-                      <Check className="h-4 w-4 text-[hsl(var(--accent-green))] mr-2" />
+                      <Check className="h-4 w-4 text-[hsl(var(--accent-nude))] mr-2" />
                       {feature}
                     </li>
                   ))}
@@ -430,7 +430,7 @@ export default function Home() {
         </div>
       </section>
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-gray-50">
+      <section id="pricing" className="py-20 bg-stone-100">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -455,12 +455,12 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
                 className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative ${
-                  plan.popular ? "border-2 border-[hsl(var(--primary-blue))]" : ""
+                  plan.popular ? "border-2 border-[hsl(var(--primary-brown))]" : ""
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-[hsl(var(--primary-blue))] text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-[hsl(var(--primary-brown))] text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Popular
                     </span>
                   </div>
@@ -470,7 +470,7 @@ export default function Home() {
                   <h3 className="text-2xl font-bold text-[hsl(var(--secondary-dark))] mb-4">
                     {plan.name}
                   </h3>
-                  <div className="text-4xl font-bold text-[hsl(var(--primary-blue))] mb-6">
+                  <div className="text-4xl font-bold text-[hsl(var(--primary-brown))] mb-6">
                     {plan.price}
                     <span className="text-lg font-normal text-gray-600">{plan.period}</span>
                   </div>
@@ -478,7 +478,7 @@ export default function Home() {
                   <ul className="space-y-4 mb-8 text-left">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-center">
-                        <Check className="h-5 w-5 text-[hsl(var(--accent-green))] mr-3 flex-shrink-0" />
+                        <Check className="h-5 w-5 text-[hsl(var(--accent-nude))] mr-3 flex-shrink-0" />
                         <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
@@ -487,7 +487,7 @@ export default function Home() {
                   <Button
                     className={`w-full py-3 font-semibold transition-colors duration-200 ${
                       plan.popular
-                        ? "bg-[hsl(var(--primary-blue))] text-white hover:bg-[hsl(var(--primary-blue))]/90"
+                        ? "bg-[hsl(var(--primary-brown))] text-white hover:bg-[hsl(var(--primary-brown))]/90"
                         : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                     }`}
                   >
@@ -524,8 +524,8 @@ export default function Home() {
               className="space-y-8"
             >
               <div className="flex items-start space-x-4">
-                <div className="bg-[hsl(var(--primary-blue))]/10 p-3 rounded-lg">
-                  <Mail className="h-6 w-6 text-[hsl(var(--primary-blue))]" />
+                <div className="bg-[hsl(var(--primary-brown))]/10 p-3 rounded-lg">
+                  <Mail className="h-6 w-6 text-[hsl(var(--primary-brown))]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-[hsl(var(--secondary-dark))] mb-2">Email</h3>
@@ -534,8 +534,8 @@ export default function Home() {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="bg-[hsl(var(--primary-blue))]/10 p-3 rounded-lg">
-                  <Phone className="h-6 w-6 text-[hsl(var(--primary-blue))]" />
+                <div className="bg-[hsl(var(--primary-brown))]/10 p-3 rounded-lg">
+                  <Phone className="h-6 w-6 text-[hsl(var(--primary-brown))]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-[hsl(var(--secondary-dark))] mb-2">Phone</h3>
@@ -544,8 +544,8 @@ export default function Home() {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="bg-[hsl(var(--primary-blue))]/10 p-3 rounded-lg">
-                  <MapPin className="h-6 w-6 text-[hsl(var(--primary-blue))]" />
+                <div className="bg-[hsl(var(--primary-brown))]/10 p-3 rounded-lg">
+                  <MapPin className="h-6 w-6 text-[hsl(var(--primary-brown))]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-[hsl(var(--secondary-dark))] mb-2">Location</h3>
@@ -558,7 +558,7 @@ export default function Home() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-gray-50 rounded-2xl p-8"
+              className="bg-stone-50 rounded-2xl p-8"
             >
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
@@ -632,7 +632,7 @@ export default function Home() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-[hsl(var(--primary-blue))] text-white hover:bg-[hsl(var(--primary-blue))]/90 py-3 font-semibold"
+                  className="w-full bg-[hsl(var(--primary-brown))] text-white hover:bg-[hsl(var(--primary-brown))]/90 py-3 font-semibold"
                 >
                   Send Message
                 </Button>
@@ -646,7 +646,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center">
             <div className="text-3xl font-bold mb-4">
-              <span className="text-[hsl(var(--primary-blue))]">Design</span>Pro
+              <span className="text-[hsl(var(--primary-brown))]">Design</span>Pro
             </div>
             <p className="text-gray-400 mb-6">
               Creating beautiful, functional websites that drive results.
