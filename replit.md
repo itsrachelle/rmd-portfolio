@@ -7,6 +7,7 @@ This is a modern full-stack web application built with React, Express.js, and Ty
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Design preferences: Warm nude and brown color scheme for modern, inviting aesthetic.
 
 ## System Architecture
 
