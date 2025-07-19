@@ -250,7 +250,6 @@ export default function Home() {
           )}
         </AnimatePresence>
       </nav>
-
       {/* Hero Section */}
       <section className="hero-gradient h-[70vh] flex items-center justify-center text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -284,7 +283,6 @@ export default function Home() {
           <ChevronDown className="h-8 w-8 text-white" />
         </motion.div>
       </section>
-
       {/* About Section */}
       <section id="about" className="py-20 bg-white">
         <div className="container mx-auto px-6">
@@ -324,9 +322,7 @@ export default function Home() {
                 transition={{ delay: 0.4 }}
                 className="space-y-6"
               >
-                <h3 className="text-2xl font-semibold text-[hsl(var(--secondary-dark))]">
-                  Hi, I'm Alex Johnson
-                </h3>
+                <h3 className="text-2xl font-semibold text-[hsl(var(--secondary-dark))]">Hi, I'm Rachelle</h3>
                 <p className="text-gray-600 leading-relaxed">
                   With over 8 years of experience in web design and development, I specialize in creating modern, 
                   responsive websites that not only look stunning but also drive results for businesses.
@@ -351,7 +347,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section id="services" className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
@@ -402,7 +397,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Portfolio Section */}
       <section id="portfolio" className="py-20 bg-white">
         <div className="container mx-auto px-6">
@@ -449,7 +443,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
@@ -520,7 +513,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-white">
         <div className="container mx-auto px-6">
@@ -663,7 +655,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="bg-[hsl(var(--secondary-dark))] text-white py-12">
         <div className="container mx-auto px-6">
