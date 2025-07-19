@@ -323,7 +323,7 @@ export default function Home() {
                 className="space-y-6"
               >
                 <h3 className="text-2xl font-semibold text-[hsl(var(--secondary-dark))]">Hi, I'm Rachelle</h3>
-                <p className="text-gray-600 leading-relaxed">A digital project manager who builds clean, modern websites for small businesses. I specialise in creating websites that don’t just look good - they work. Whether you’re starting fresh or need to upgrade your current site, I make sure your online presence is as professional as your business.</p>
+                <p className="text-gray-600 leading-relaxed">A digital project manager who builds clean, modern websites for small businesses - websites that not only look great, but work. Whether you’re starting fresh or upgrading your current site, I’ll make sure your online presence reflects the professionalism of your business.</p>
                 <p className="text-gray-600 leading-relaxed">With years of experience leading web projects across industries, I bring clarity, speed, and style to every build. I focus on what matters: user-friendly design, smooth functionality, and a fast turnaround.</p>
                 
               </motion.div>
