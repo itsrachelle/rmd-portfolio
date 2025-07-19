@@ -324,7 +324,7 @@ export default function Home() {
               >
                 <h3 className="text-2xl font-semibold text-[hsl(var(--secondary-dark))]">Hi, I'm Rachelle</h3>
                 <p className="text-gray-600 leading-relaxed">A digital project manager who builds clean, modern websites for small businesses - websites that not only look great, but work. Whether you’re starting fresh or upgrading your current site, I’ll make sure your online presence reflects the professionalism of your business.</p>
-                <p className="text-gray-600 leading-relaxed">With years of experience leading web projects across industries, I bring clarity, speed, and style to every build. I focus on what matters: user-friendly design, smooth functionality, and a fast turnaround.</p>
+                <p className="text-gray-600 leading-relaxed">With experience leading web projects across industries, I bring clarity, speed, and style to every build - focusing on user-friendly design, smooth functionality, and fast delivery. The process is simple and stress-free, so you can focus on your business while I handle the website.</p>
                 
               </motion.div>
             </div>
