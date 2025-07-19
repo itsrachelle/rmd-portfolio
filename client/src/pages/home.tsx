@@ -21,6 +21,8 @@ import {
   ExternalLink
 } from "lucide-react";
 
+import tempImageQe40RA from "@assets/tempImageQe40RA.png";
+
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
@@ -309,7 +311,7 @@ export default function Home() {
                 transition={{ delay: 0.2 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800"
+                  src={tempImageQe40RA}
                   alt="Professional headshot"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                 />
