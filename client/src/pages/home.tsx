@@ -323,10 +323,7 @@ export default function Home() {
                 className="space-y-6"
               >
                 <h3 className="text-2xl font-semibold text-[hsl(var(--secondary-dark))]">Hi, I'm Rachelle</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  With over 8 years of experience in web design and development, I specialize in creating modern, 
-                  responsive websites that not only look stunning but also drive results for businesses.
-                </p>
+                <p className="text-gray-600 leading-relaxed">A digital project manager who builds clean, modern websites for small businesses. I specialise in creating websites that don’t just look good - they work. Whether you’re starting fresh or need to upgrade your current site, I make sure your online presence is as professional as your business.</p>
                 <p className="text-gray-600 leading-relaxed">
                   I believe in the power of clean design, user-focused experiences, and cutting-edge technology 
                   to help brands tell their story and connect with their audience.
