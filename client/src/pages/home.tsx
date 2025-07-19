@@ -66,34 +66,40 @@ export default function Home() {
 
   const portfolioItems = [
     {
-      title: "E-commerce Platform",
-      description: "Modern online store with seamless checkout",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+      companyName: "BloomMarket",
+      description: "E-commerce platform with seamless checkout and inventory management",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      liveUrl: "#"
     },
     {
-      title: "Corporate Website",
-      description: "Professional business presence online",
-      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+      companyName: "Sterling & Associates",
+      description: "Professional corporate website with client portal and service showcase",
+      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      liveUrl: "#"
     },
     {
-      title: "Portfolio Showcase",
-      description: "Creative portfolio with stunning visuals",
-      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+      companyName: "Maya Chen Creative",
+      description: "Creative portfolio showcase with interactive galleries and project details",
+      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      liveUrl: "#"
     },
     {
-      title: "Restaurant Website",
-      description: "Appetizing design with online ordering",
-      image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+      companyName: "Bella Vista Bistro",
+      description: "Restaurant website with online ordering and reservation system",
+      image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      liveUrl: "#"
     },
     {
-      title: "Tech Startup",
-      description: "Innovative design for cutting-edge company",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+      companyName: "InnovateAI",
+      description: "Tech startup landing page with product demos and investor information",
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      liveUrl: "#"
     },
     {
-      title: "Wellness Center",
-      description: "Calming design promoting health services",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+      companyName: "Serenity Wellness",
+      description: "Wellness center website with appointment booking and service information",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      liveUrl: "#"
     }
   ];
 
@@ -403,26 +409,35 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {portfolioItems.map((item, index) => (
               <motion.div
-                key={item.title}
+                key={item.companyName}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
               >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                    <p className="text-sm">{item.description}</p>
-                  </div>
-                  <div className="absolute top-4 right-4">
-                    <ExternalLink className="h-5 w-5 text-white" />
-                  </div>
+                <div className="relative overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={`${item.companyName} website screenshot`}
+                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-[hsl(var(--secondary-dark))] mb-3">
+                    {item.companyName}
+                  </h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {item.description}
+                  </p>
+                  <a
+                    href={item.liveUrl}
+                    className="inline-flex items-center text-[hsl(var(--primary-brown))] hover:text-[hsl(var(--primary-brown))]/80 font-medium transition-colors duration-200"
+                  >
+                    Live Preview
+                    <ExternalLink className="h-4 w-4 ml-2" />
+                  </a>
                 </div>
               </motion.div>
             ))}
