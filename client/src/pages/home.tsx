@@ -41,8 +41,8 @@ export default function Home() {
 
   const navItems = [
     { href: "#about", label: "About" },
-    { href: "#portfolio", label: "Portfolio" },
     { href: "#pricing", label: "Pricing" },
+    { href: "#portfolio", label: "Portfolio" },
     { href: "#contact", label: "Contact" }
   ];
 
@@ -301,61 +301,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-[hsl(var(--secondary-dark))] mb-6">
-              Portfolio
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Recent projects showcasing modern design and functionality
-            </p>
-          </motion.div>
-
-          <div className="flex justify-center">
-            {portfolioItems.map((item, index) => (
-              <motion.div
-                key={item.companyName}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden max-w-md"
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={`${item.companyName} website screenshot`}
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-[hsl(var(--secondary-dark))] mb-3">
-                    {item.companyName}
-                  </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {item.description}
-                  </p>
-                  <a
-                    href={item.liveUrl}
-                    className="inline-flex items-center text-[hsl(var(--primary-brown))] hover:text-[hsl(var(--primary-brown))]/80 font-medium transition-colors duration-200"
-                  >
-                    Live Preview
-                    <ExternalLink className="h-4 w-4 ml-2" />
-                  </a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-stone-100">
         <div className="container mx-auto px-6">
@@ -459,6 +404,62 @@ export default function Home() {
               Get in touch - I'd love to hear what you need and help make it happen!
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section id="portfolio" className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-[hsl(var(--secondary-dark))] mb-6">
+              Portfolio
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Recent projects showcasing modern design and functionality
+            </p>
+          </motion.div>
+
+          <div className="flex justify-center">
+            {portfolioItems.map((item, index) => (
+              <motion.div
+                key={item.companyName}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden max-w-md"
+              >
+                <div className="relative overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={`${item.companyName} website screenshot`}
+                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-[hsl(var(--secondary-dark))] mb-3">
+                    {item.companyName}
+                  </h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {item.description}
+                  </p>
+                  <a
+                    href={item.liveUrl}
+                    className="inline-flex items-center text-[hsl(var(--primary-brown))] hover:text-[hsl(var(--primary-brown))]/80 font-medium transition-colors duration-200"
+                  >
+                    Live Preview
+                    <ExternalLink className="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
       {/* Contact Section */}
