@@ -739,29 +739,22 @@ export default function Home() {
                   Let's Start Your Project
                 </h3>
                 
-                {[
-                  { icon: Mail, title: "Email", info: "hello@designpro.com", description: "Drop me a line anytime" },
-                  { icon: Phone, title: "Phone", info: "+1 (555) 123-4567", description: "Call for immediate consultation" },
-                  { icon: MapPin, title: "Location", info: "Remote + Local", description: "Serving clients worldwide" }
-                ].map((contact, index) => (
-                  <motion.div
-                    key={contact.title}
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.2, duration: 0.6 }}
-                    className="flex items-start gap-6 group"
-                  >
-                    <div className="w-14 h-14 bg-gradient-to-r from-[hsl(var(--primary-brown))] to-[hsl(var(--secondary-dark))] rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
-                      <contact.icon className="h-7 w-7 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-xl font-normal font-poppins text-[hsl(var(--secondary-dark))] mb-2">{contact.title}</h4>
-                      <p className="text-lg font-medium text-gray-800 mb-1">{contact.info}</p>
-                      <p className="text-sm text-gray-500">{contact.description}</p>
-                    </div>
-                  </motion.div>
-                ))}
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                  className="flex items-start gap-6 group"
+                >
+                  <div className="w-14 h-14 bg-gradient-to-r from-[hsl(var(--primary-brown))] to-[hsl(var(--secondary-dark))] rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
+                    <Mail className="h-7 w-7 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-xl font-normal font-poppins text-[hsl(var(--secondary-dark))] mb-2">Email</h4>
+                    <p className="text-lg font-medium text-gray-800 mb-1">itsrachellenaomi@gmail.com</p>
+                    <p className="text-sm text-gray-500">Drop me a line anytime</p>
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
 
