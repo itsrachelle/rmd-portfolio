@@ -459,7 +459,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-[hsl(var(--secondary-dark))] mb-6">
               Get In Touch
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Ready to create your website? Let's discuss how I can help bring your vision to life.</p>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Ready to create your website? Let's discuss how I can help bring your vision to life!</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
