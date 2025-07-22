@@ -194,12 +194,7 @@ export default function Home() {
                   }`}></span>
                 </button>
               ))}
-              <Link href="/theme-generator">
-                <Button className="btn-modern text-sm px-6 py-2.5 h-auto shadow-lg">
-                  <Palette className="h-4 w-4 mr-2" />
-                  Themes
-                </Button>
-              </Link>
+
             </div>
 
             {/* Mobile Menu Button */}
@@ -336,114 +331,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Theme Generator Feature Callout */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-[hsl(var(--surface))]/30 relative overflow-hidden section-modern">
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="card-modern p-10 max-w-6xl mx-auto"
-          >
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-8">
-                <motion.div
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2, duration: 0.6 }}
-                  className="flex items-center gap-4"
-                >
-                  <div className="bg-gradient-to-r from-[hsl(var(--primary-brown))] to-[hsl(var(--secondary-dark))] p-4 rounded-2xl shadow-lg">
-                    <Palette className="h-8 w-8 text-white" />
-                  </div>
-                  <div>
-                    <span className="inline-block bg-gradient-to-r from-[hsl(var(--primary-brown))] to-[hsl(var(--secondary-dark))] text-white px-4 py-1 rounded-full text-sm font-semibold mb-2">
-                      ✨ NEW FEATURE
-                    </span>
-                    <h3 className="text-3xl lg:text-4xl font-normal font-poppins text-[hsl(var(--secondary-dark))] leading-tight">
-                      Color Theme Generator
-                    </h3>
-                  </div>
-                </motion.div>
-                
-                <motion.p 
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.4, duration: 0.6 }}
-                  className="text-lg text-gray-600 leading-relaxed"
-                >
-                  Transform your website's personality instantly with our intelligent theme generator. 
-                  Choose from professionally curated palettes or let AI create unique combinations 
-                  that perfectly match your brand vision.
-                </motion.p>
-                
-                <motion.div
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.6, duration: 0.6 }}
-                  className="flex flex-wrap gap-4"
-                >
-                  <Link href="/theme-generator">
-                    <Button className="btn-modern text-base px-8 py-3 shadow-xl group">
-                      <Palette className="h-5 w-5 mr-3" />
-                      Launch Theme Generator
-                      <ArrowRight className="h-5 w-5 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
-                    </Button>
-                  </Link>
-                  <div className="flex items-center gap-2 text-sm text-gray-500">
-                    <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                    6 themes available + unlimited random
-                  </div>
-                </motion.div>
-              </div>
-              
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3, duration: 0.8 }}
-                className="relative"
-              >
-                <div className="grid grid-cols-3 gap-4 perspective-1000">
-                  {[
-                    { colors: ['from-amber-600 to-amber-800', 'from-amber-100 to-amber-200'], name: 'Warm', delay: 0 },
-                    { colors: ['from-blue-600 to-blue-800', 'from-blue-100 to-blue-200'], name: 'Ocean', delay: 0.1 },
-                    { colors: ['from-emerald-600 to-emerald-800', 'from-emerald-100 to-emerald-200'], name: 'Forest', delay: 0.2 },
-                    { colors: ['from-orange-600 to-orange-800', 'from-orange-100 to-orange-200'], name: 'Sunset', delay: 0.3 },
-                    { colors: ['from-purple-600 to-purple-800', 'from-purple-100 to-purple-200'], name: 'Luxury', delay: 0.4 },
-                    { colors: ['from-gray-600 to-gray-800', 'from-gray-100 to-gray-200'], name: 'Minimal', delay: 0.5 }
-                  ].map((theme, index) => (
-                    <motion.div
-                      key={theme.name}
-                      initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
-                      whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: theme.delay, duration: 0.6, ease: "easeOut" }}
-                      whileHover={{ scale: 1.05, rotateY: 5 }}
-                      className="space-y-2 transform-3d cursor-pointer"
-                    >
-                      <div className={`h-16 bg-gradient-to-b ${theme.colors[0]} rounded-xl shadow-lg hover:shadow-xl transition-all duration-300`}></div>
-                      <div className={`h-16 bg-gradient-to-b ${theme.colors[1]} rounded-xl shadow-lg hover:shadow-xl transition-all duration-300`}></div>
-                      <div className="text-xs text-center text-gray-600 font-semibold">{theme.name}</div>
-                    </motion.div>
-                  ))}
-                </div>
-                
-                {/* Floating decorative elements */}
-                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-[hsl(var(--primary-brown))]/20 to-[hsl(var(--secondary-dark))]/20 rounded-full floating-animation blur-sm"></div>
-                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-[hsl(var(--accent-nude))]/30 to-[hsl(var(--primary-brown))]/20 rounded-full floating-animation blur-sm" style={{ animationDelay: '2s' }}></div>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-        
-        {/* Background decorations */}
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[hsl(var(--accent-nude))]/5 to-transparent"></div>
-      </section>
+
 
       {/* About Section */}
       <section id="about" className="py-24 bg-gradient-to-b from-white via-gray-50/30 to-white relative overflow-hidden section-modern">
