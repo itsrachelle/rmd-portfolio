@@ -164,13 +164,14 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-amber-50">
+    <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+      <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-xl border-0 shadow-lg z-50 transition-all duration-300">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold text-[hsl(var(--secondary-dark))]">
-              <span className="text-[hsl(var(--primary-brown))]">Design</span>Pro
+            <div className="text-3xl font-bold font-space tracking-tight">
+              <span className="text-gradient">Design</span>
+              <span className="text-[hsl(var(--secondary-dark))]">Pro</span>
             </div>
             
             {/* Desktop Navigation */}
@@ -179,15 +180,18 @@ export default function Home() {
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className={`text-gray-600 hover:text-[hsl(var(--primary-brown))] transition-colors duration-200 ${
+                  className={`relative font-medium text-gray-700 hover:text-[hsl(var(--primary-brown))] transition-all duration-300 group ${
                     activeSection === item.href.replace("#", "") ? "text-[hsl(var(--primary-brown))]" : ""
                   }`}
                 >
                   {item.label}
+                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-[hsl(var(--primary-brown))] to-[hsl(var(--secondary-dark))] transition-all duration-300 ${
+                    activeSection === item.href.replace("#", "") ? "w-full" : "w-0 group-hover:w-full"
+                  }`}></span>
                 </button>
               ))}
               <Link href="/theme-generator">
-                <Button className="bg-[hsl(var(--primary-brown))] text-white hover:bg-[hsl(var(--primary-brown))]/90 text-sm px-4 py-2 h-auto">
+                <Button className="btn-modern text-sm px-6 py-2.5 h-auto shadow-lg">
                   <Palette className="h-4 w-4 mr-2" />
                   Themes
                 </Button>
@@ -235,106 +239,241 @@ export default function Home() {
         </AnimatePresence>
       </nav>
       {/* Hero Section */}
-      <section className="hero-gradient h-[70vh] flex items-center justify-center text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="container mx-auto px-6 text-center relative z-10">
+      <section className="modern-hero-gradient min-h-screen flex items-center justify-center text-white relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full floating-animation" style={{ animationDelay: '0s' }}></div>
+          <div className="absolute top-40 right-32 w-24 h-24 bg-white rounded-full floating-animation" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute bottom-32 left-1/3 w-16 h-16 bg-white rounded-full floating-animation" style={{ animationDelay: '4s' }}></div>
+        </div>
+        
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/20"></div>
+        
+        <div className="container mx-auto px-6 text-center relative z-10 max-w-6xl">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="space-y-8"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Modern Website Design
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-              Get a beautiful, mobile-friendly website in less than 3 days
-            </p>
-            <Button
-              onClick={() => scrollToSection("#portfolio")}
-              size="lg"
-              className="bg-white text-[hsl(var(--primary-brown))] hover:bg-gray-100 px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+            {/* Hero badge */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 text-sm font-medium"
             >
-              See My Work <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              Available for projects
+            </motion.div>
+            
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black font-space leading-none tracking-tight">
+              <span className="block">Modern</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white">
+                Website
+              </span>
+              <span className="block">Design</span>
+            </h1>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="text-xl md:text-2xl lg:text-3xl font-light max-w-4xl mx-auto leading-relaxed text-white/90"
+            >
+              Crafting <span className="font-semibold text-white">beautiful, mobile-friendly</span> websites 
+              that convert visitors into customers in <span className="font-semibold text-white">less than 3 days</span>
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9, duration: 0.6 }}
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-6"
+            >
+              <Button
+                onClick={() => scrollToSection("#portfolio")}
+                size="lg"
+                className="bg-white text-[hsl(var(--secondary-dark))] hover:bg-gray-100 px-10 py-5 text-lg font-bold rounded-full shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300 group"
+              >
+                View My Work 
+                <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </Button>
+              
+              <Button
+                onClick={() => scrollToSection("#contact")}
+                size="lg"
+                variant="outline"
+                className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-10 py-5 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105"
+              >
+                Let's Talk
+              </Button>
+            </motion.div>
+            
+            {/* Stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2, duration: 0.6 }}
+              className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 max-w-2xl mx-auto"
+            >
+              {[
+                { number: "50+", label: "Projects Delivered" },
+                { number: "48hrs", label: "Average Turnaround" },
+                { number: "100%", label: "Client Satisfaction" }
+              ].map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold font-space text-white">{stat.number}</div>
+                  <div className="text-sm md:text-base text-white/70 font-medium">{stat.label}</div>
+                </div>
+              ))}
+            </motion.div>
           </motion.div>
         </div>
         
+        {/* Scroll indicator */}
         <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5, duration: 0.6 }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         >
-          <ChevronDown className="h-8 w-8 text-white" />
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+            className="flex flex-col items-center gap-2 text-white/60"
+          >
+            <span className="text-sm font-medium">Scroll to explore</span>
+            <ChevronDown className="h-6 w-6" />
+          </motion.div>
         </motion.div>
       </section>
 
       {/* Theme Generator Feature Callout */}
-      <section className="py-12 bg-gradient-to-r from-[hsl(var(--accent-nude))] to-white">
-        <div className="container mx-auto px-6">
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-[hsl(var(--surface))]/30 relative overflow-hidden section-modern">
+        <div className="container mx-auto px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto"
+            transition={{ duration: 0.8 }}
+            className="card-modern p-10 max-w-6xl mx-auto"
           >
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-[hsl(var(--primary-brown))]/10 p-3 rounded-full">
-                    <Palette className="h-6 w-6 text-[hsl(var(--primary-brown))]" />
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2, duration: 0.6 }}
+                  className="flex items-center gap-4"
+                >
+                  <div className="bg-gradient-to-r from-[hsl(var(--primary-brown))] to-[hsl(var(--secondary-dark))] p-4 rounded-2xl shadow-lg">
+                    <Palette className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-[hsl(var(--secondary-dark))]">
-                    New: Color Theme Generator
-                  </h3>
-                </div>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Personalize your website's look with our new theme generator. Choose from curated color palettes or create random combinations to match your brand perfectly.
-                </p>
-                <Link href="/theme-generator">
-                  <Button className="bg-[hsl(var(--primary-brown))] text-white hover:bg-[hsl(var(--primary-brown))]/90">
-                    <Palette className="h-4 w-4 mr-2" />
-                    Try Theme Generator
-                  </Button>
-                </Link>
+                  <div>
+                    <span className="inline-block bg-gradient-to-r from-[hsl(var(--primary-brown))] to-[hsl(var(--secondary-dark))] text-white px-4 py-1 rounded-full text-sm font-semibold mb-2">
+                      ✨ NEW FEATURE
+                    </span>
+                    <h3 className="text-3xl lg:text-4xl font-bold font-space text-[hsl(var(--secondary-dark))] leading-tight">
+                      Color Theme Generator
+                    </h3>
+                  </div>
+                </motion.div>
+                
+                <motion.p 
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4, duration: 0.6 }}
+                  className="text-lg text-gray-600 leading-relaxed"
+                >
+                  Transform your website's personality instantly with our intelligent theme generator. 
+                  Choose from professionally curated palettes or let AI create unique combinations 
+                  that perfectly match your brand vision.
+                </motion.p>
+                
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.6, duration: 0.6 }}
+                  className="flex flex-wrap gap-4"
+                >
+                  <Link href="/theme-generator">
+                    <Button className="btn-modern text-base px-8 py-3 shadow-xl group">
+                      <Palette className="h-5 w-5 mr-3" />
+                      Launch Theme Generator
+                      <ArrowRight className="h-5 w-5 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
+                    </Button>
+                  </Link>
+                  <div className="flex items-center gap-2 text-sm text-gray-500">
+                    <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                    6 themes available + unlimited random
+                  </div>
+                </motion.div>
               </div>
-              <div className="grid grid-cols-3 gap-4">
-                {/* Sample color swatches */}
-                <div className="space-y-2">
-                  <div className="h-12 bg-gradient-to-b from-amber-700 to-amber-800 rounded-lg shadow"></div>
-                  <div className="h-12 bg-gradient-to-b from-amber-100 to-amber-200 rounded-lg shadow"></div>
-                  <div className="text-xs text-center text-gray-600 font-medium">Warm</div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3, duration: 0.8 }}
+                className="relative"
+              >
+                <div className="grid grid-cols-3 gap-4 perspective-1000">
+                  {[
+                    { colors: ['from-amber-600 to-amber-800', 'from-amber-100 to-amber-200'], name: 'Warm', delay: 0 },
+                    { colors: ['from-blue-600 to-blue-800', 'from-blue-100 to-blue-200'], name: 'Ocean', delay: 0.1 },
+                    { colors: ['from-emerald-600 to-emerald-800', 'from-emerald-100 to-emerald-200'], name: 'Forest', delay: 0.2 },
+                    { colors: ['from-orange-600 to-orange-800', 'from-orange-100 to-orange-200'], name: 'Sunset', delay: 0.3 },
+                    { colors: ['from-purple-600 to-purple-800', 'from-purple-100 to-purple-200'], name: 'Luxury', delay: 0.4 },
+                    { colors: ['from-gray-600 to-gray-800', 'from-gray-100 to-gray-200'], name: 'Minimal', delay: 0.5 }
+                  ].map((theme, index) => (
+                    <motion.div
+                      key={theme.name}
+                      initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
+                      whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: theme.delay, duration: 0.6, ease: "easeOut" }}
+                      whileHover={{ scale: 1.05, rotateY: 5 }}
+                      className="space-y-2 transform-3d cursor-pointer"
+                    >
+                      <div className={`h-16 bg-gradient-to-b ${theme.colors[0]} rounded-xl shadow-lg hover:shadow-xl transition-all duration-300`}></div>
+                      <div className={`h-16 bg-gradient-to-b ${theme.colors[1]} rounded-xl shadow-lg hover:shadow-xl transition-all duration-300`}></div>
+                      <div className="text-xs text-center text-gray-600 font-semibold">{theme.name}</div>
+                    </motion.div>
+                  ))}
                 </div>
-                <div className="space-y-2">
-                  <div className="h-12 bg-gradient-to-b from-blue-700 to-blue-800 rounded-lg shadow"></div>
-                  <div className="h-12 bg-gradient-to-b from-blue-100 to-blue-200 rounded-lg shadow"></div>
-                  <div className="text-xs text-center text-gray-600 font-medium">Ocean</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="h-12 bg-gradient-to-b from-green-700 to-green-800 rounded-lg shadow"></div>
-                  <div className="h-12 bg-gradient-to-b from-green-100 to-green-200 rounded-lg shadow"></div>
-                  <div className="text-xs text-center text-gray-600 font-medium">Forest</div>
-                </div>
-              </div>
+                
+                {/* Floating decorative elements */}
+                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-[hsl(var(--primary-brown))]/20 to-[hsl(var(--secondary-dark))]/20 rounded-full floating-animation blur-sm"></div>
+                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-[hsl(var(--accent-nude))]/30 to-[hsl(var(--primary-brown))]/20 rounded-full floating-animation blur-sm" style={{ animationDelay: '2s' }}></div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
+        
+        {/* Background decorations */}
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[hsl(var(--accent-nude))]/5 to-transparent"></div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+      <section id="about" className="py-24 bg-gradient-to-b from-white via-gray-50/30 to-white relative overflow-hidden section-modern">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              transition={{ duration: 0.8 }}
+              className="text-center mb-20"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-[hsl(var(--secondary-dark))] mb-6">
-                About Me
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-black font-space text-[hsl(var(--secondary-dark))] mb-6 leading-none">
+                About <span className="text-gradient">Me</span>
               </h2>
-              <p className="text-xl text-gray-600">
-                Crafting digital experiences that make an impact
+              <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
+                Crafting digital experiences that make a lasting impact
               </p>
             </motion.div>
 
@@ -367,20 +506,27 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
+        {/* Background decorations */}
+        <div className="absolute top-32 left-0 w-1/4 h-40 bg-gradient-to-r from-[hsl(var(--accent-nude))]/10 to-transparent rounded-r-full"></div>
+        <div className="absolute bottom-20 right-0 w-1/3 h-32 bg-gradient-to-l from-[hsl(var(--primary-brown))]/5 to-transparent rounded-l-full"></div>
       </section>
-      {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-stone-100">
+      {/* Services Section */}
+      <section id="services" className="py-24 bg-gradient-to-br from-gray-50 via-white to-[hsl(var(--surface))]/20 relative overflow-hidden section-modern">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[hsl(var(--secondary-dark))] mb-6">
-              Services
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-black font-space text-[hsl(var(--secondary-dark))] mb-6 leading-none">
+              <span className="text-gradient">Services</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Modern Websites That Do the Work for You</p>
+            <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
+              Modern websites that work as hard as you do
+            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">

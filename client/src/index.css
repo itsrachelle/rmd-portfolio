@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
   --background: hsl(0, 0%, 100%);
@@ -26,12 +26,19 @@
   --ring: hsl(217, 91%, 60%);
   --radius: 0.5rem;
   
-  /* Custom colors for the design - Nude and Brown scheme */
-  --primary-brown: hsl(25, 35%, 45%);
-  --secondary-dark: hsl(20, 20%, 25%);
-  --accent-nude: hsl(35, 25%, 65%);
-  --hero-gradient-from: hsl(30, 40%, 55%);
-  --hero-gradient-to: hsl(20, 30%, 40%);
+  /* Custom colors for the design - Modern Nude and Brown scheme */
+  --primary-brown: 28 25% 23%;
+  --secondary-dark: 20 14.3% 4.1%;
+  --accent-nude: 30 30% 85%;
+  --hero-gradient-from: hsl(20, 14.3%, 4.1%);
+  --hero-gradient-to: hsl(28, 25%, 23%);
+  --surface: 30 20% 95%;
+  
+  /* Modern design elements */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --shadow-glow: 0 20px 60px -12px rgba(0, 0, 0, 0.25);
+  --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .dark {
@@ -73,12 +80,127 @@
 
 @layer components {
   .hero-gradient {
-    background: linear-gradient(135deg, hsl(var(--hero-gradient-from)) 0%, hsl(var(--hero-gradient-to)) 100%);
+    background: linear-gradient(135deg, var(--hero-gradient-from) 0%, var(--hero-gradient-to) 100%);
+  }
+  
+  .modern-hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--secondary-dark)) 0%, hsl(var(--primary-brown)) 50%, hsl(15, 30%, 15%) 100%);
+  }
+  
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .card-modern {
+    @apply bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border-0;
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary-brown)) 0%, hsl(var(--secondary-dark)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .glow-effect {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1), 0 0 80px rgba(0, 0, 0, 0.05);
+  }
+  
+  .btn-modern {
+    @apply bg-gradient-to-r from-[hsl(var(--primary-brown))] to-[hsl(var(--secondary-dark))] text-white rounded-full px-8 py-4 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+  }
+  
+  .section-modern {
+    @apply relative overflow-hidden;
+  }
+  
+  .section-modern::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[hsl(var(--primary-brown))] to-transparent;
   }
 }
 
 @layer utilities {
   .font-inter {
     font-family: 'Inter', sans-serif;
+  }
+  
+  .font-space {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .transform-3d {
+    transform-style: preserve-3d;
+  }
+}
+
+/* Keyframe animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1); }
+  50% { box-shadow: 0 0 0 20px rgba(0, 0, 0, 0); }
+}
+
+/* Modern scroll effects */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-on-scroll {
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  .animate-scale {
+    animation: scaleIn 0.5s ease-out;
+  }
+  
+  .animate-slide-right {
+    animation: slideInRight 0.6s ease-out;
   }
 }
