@@ -450,7 +450,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
-                className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative ${
+                className={`bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 relative ${
                   plan.popular ? "border-2 border-[hsl(var(--primary-brown))]" : ""
                 }`}
               >
@@ -463,38 +463,38 @@ export default function Home() {
                 )}
                 
                 <div className="text-center">
-                  <div className="flex justify-center mb-6">
-                    <div className="w-16 h-16 bg-[hsl(var(--accent-nude))] rounded-full flex items-center justify-center">
-                      <plan.icon className="h-8 w-8 text-[hsl(var(--primary-brown))]" />
+                  <div className="flex justify-center mb-4">
+                    <div className="w-14 h-14 bg-[hsl(var(--accent-nude))] rounded-full flex items-center justify-center">
+                      <plan.icon className="h-7 w-7 text-[hsl(var(--primary-brown))]" />
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-[hsl(var(--secondary-dark))] mb-4">
+                  <h3 className="text-xl font-bold text-[hsl(var(--secondary-dark))] mb-3">
                     {plan.name}
                   </h3>
-                  <div className="text-4xl font-bold text-[hsl(var(--primary-brown))] mb-6">
+                  <div className="text-3xl font-bold text-[hsl(var(--primary-brown))] mb-4">
                     {plan.price}
-                    {plan.period && <span className="text-lg font-normal text-gray-600"> {plan.period}</span>}
+                    {plan.period && <span className="text-base font-normal text-gray-600"> {plan.period}</span>}
                   </div>
                   
                   {plan.description && (
-                    <div className="text-gray-600 mb-6 text-left leading-relaxed">
+                    <div className="text-gray-600 mb-4 text-left leading-relaxed text-sm">
                       {plan.description.split('\n').map((line, index) => (
-                        <p key={index} className={index > 0 ? 'mt-3' : ''}>
+                        <p key={index} className={index > 0 ? 'mt-2' : ''}>
                           {line}
                         </p>
                       ))}
                     </div>
                   )}
                   
-                  <div className="text-left mb-6">
-                    <h4 className="font-semibold text-[hsl(var(--secondary-dark))] mb-3">
+                  <div className="text-left mb-4">
+                    <h4 className="font-semibold text-[hsl(var(--secondary-dark))] mb-2 text-sm">
                       {plan.name === "Basic 3–5 Page Website" ? "What's included:" : "Includes:"}
                     </h4>
-                    <ul className="space-y-3">
+                    <ul className="space-y-2">
                       {plan.features.map((feature) => (
                         <li key={feature} className="flex items-start">
-                          <Check className="h-5 w-5 text-[hsl(var(--primary-brown))] mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-700">{feature}</span>
+                          <Check className="h-4 w-4 text-[hsl(var(--primary-brown))] mr-2 mt-0.5 flex-shrink-0" />
+                          <span className="text-gray-700 text-sm">{feature}</span>
                         </li>
                       ))}
                     </ul>
