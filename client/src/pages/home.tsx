@@ -75,41 +75,41 @@ export default function Home() {
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$2,500",
-      period: "/ project",
+      name: "One-Page Website",
+      price: "$200",
+      period: "",
+      description: "A sleek, modern one-page site designed to tell your story and drive action. Perfect for small businesses, consultants, or personal brands just getting started online.",
       features: [
-        "5-page responsive website",
-        "Mobile-first design",
-        "Basic SEO optimization",
-        "Contact form integration",
-        "30 days support"
+        "Full website setup and design",
+        "Clean, responsive layout optimized for mobile",
+        "Basic SEO setup",
+        "Hosting and domain setup support"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$4,500",
-      period: "/ project",
+      name: "Basic 3–5 Page Website",
+      price: "$400-$600",
+      period: "",
+      description: "A fully customized website (up to 5 pages) to showcase your brand and convert visitors.",
       features: [
-        "10-page responsive website",
-        "Custom design & branding",
-        "Advanced SEO optimization",
-        "CMS integration",
-        "60 days support"
+        "Website setup and design",
+        "Up to 5 pages (e.g., Home, Services/Menu, About, Contact, Blog or Booking)",
+        "Mobile-friendly design",
+        "Basic SEO",
+        "Hosting and domain setup support"
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$8,500",
-      period: "/ project",
+      name: "Ongoing Website Management",
+      price: "$100",
+      period: "per month",
+      description: "Keep your site fresh, up-to-date, and running smoothly — without lifting a finger.",
       features: [
-        "Unlimited pages",
-        "E-commerce functionality",
-        "Premium SEO package",
-        "Custom integrations",
-        "90 days support"
+        "Up to 3 content updates per month (text, photos, menus, seasonal offers, etc.)",
+        "Add new sections like an About page, blog posts, or promotions",
+        "Basic performance and upkeep monitoring"
       ],
       popular: false
     }
@@ -121,8 +121,9 @@ export default function Home() {
       const scrollY = window.scrollY + 200;
 
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
+        const htmlSection = section as HTMLElement;
+        const sectionTop = htmlSection.offsetTop;
+        const sectionHeight = htmlSection.clientHeight;
         const sectionId = section.getAttribute("id");
 
         if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
@@ -457,17 +458,28 @@ export default function Home() {
                   </h3>
                   <div className="text-4xl font-bold text-[hsl(var(--primary-brown))] mb-6">
                     {plan.price}
-                    <span className="text-lg font-normal text-gray-600">{plan.period}</span>
+                    {plan.period && <span className="text-lg font-normal text-gray-600"> {plan.period}</span>}
                   </div>
                   
-                  <ul className="space-y-4 mb-8 text-left">
-                    {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-center">
-                        <Check className="h-5 w-5 text-[hsl(var(--accent-nude))] mr-3 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {plan.description && (
+                    <p className="text-gray-600 mb-6 text-left leading-relaxed">
+                      {plan.description}
+                    </p>
+                  )}
+                  
+                  <div className="text-left mb-6">
+                    <h4 className="font-semibold text-[hsl(var(--secondary-dark))] mb-3">
+                      {plan.name === "Basic 3–5 Page Website" ? "What's included:" : "Includes:"}
+                    </h4>
+                    <ul className="space-y-3">
+                      {plan.features.map((feature) => (
+                        <li key={feature} className="flex items-start">
+                          <span className="text-[hsl(var(--accent-nude))] mr-3 mt-1">*</span>
+                          <span className="text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                   
                   <Button
                     className={`w-full py-3 font-semibold transition-colors duration-200 ${
@@ -482,6 +494,21 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+          
+          {/* Custom Work Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mt-16 bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto"
+          >
+            <h3 className="text-2xl font-bold text-[hsl(var(--secondary-dark))] mb-4">
+              Need something custom?
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              Get in touch - I'd love to hear what you need and help make it happen!
+            </p>
+          </motion.div>
         </div>
       </section>
       {/* Contact Section */}
