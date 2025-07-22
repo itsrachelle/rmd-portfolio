@@ -41,7 +41,7 @@ export default function Home() {
 
   const navItems = [
     { href: "#about", label: "About" },
-    { href: "#pricing", label: "Pricing" },
+    { href: "#pricing", label: "Services" },
     { href: "#portfolio", label: "Portfolio" },
     { href: "#contact", label: "Contact" }
   ];
@@ -311,7 +311,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-[hsl(var(--secondary-dark))] mb-6">
-              Pricing
+              Services
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Transparent pricing for quality web design services
