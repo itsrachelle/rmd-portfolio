@@ -268,7 +268,7 @@ export default function Home() {
             
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-normal font-poppins leading-none tracking-tight">
               <span className="block text-[73px]">Modern</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white text-[73px]">
                 Website
               </span>
               <span className="block">Design</span>
