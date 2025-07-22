@@ -493,7 +493,7 @@ export default function Home() {
                     <ul className="space-y-3">
                       {plan.features.map((feature) => (
                         <li key={feature} className="flex items-start">
-                          <span className="text-[hsl(var(--accent-nude))] mr-3 mt-1">*</span>
+                          <Check className="h-5 w-5 text-[hsl(var(--primary-brown))] mr-3 mt-0.5 flex-shrink-0" />
                           <span className="text-gray-700">{feature}</span>
                         </li>
                       ))}
