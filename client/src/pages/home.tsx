@@ -480,7 +480,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-[hsl(var(--secondary-dark))] mb-2">Email</h3>
-                  <p className="text-gray-600">hello@designpro.com</p>
+                  <p className="text-gray-600">itsrachellenaomi@gmail.com</p>
                 </div>
               </div>
 
