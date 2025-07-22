@@ -346,7 +346,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="text-center mb-20"
             >
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-normal font-poppins text-[hsl(var(--secondary-dark))] mb-6 leading-none">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal font-poppins text-[hsl(var(--secondary-dark))] mb-6 leading-none">
                 About <span className="text-gradient">Me</span>
               </h2>
               <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
@@ -398,7 +398,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-normal font-poppins text-[hsl(var(--secondary-dark))] mb-6 leading-none">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal font-poppins text-[hsl(var(--secondary-dark))] mb-6 leading-none">
               <span className="text-gradient">Services</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
@@ -531,7 +531,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-normal font-poppins text-[hsl(var(--secondary-dark))] mb-6 leading-none">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal font-poppins text-[hsl(var(--secondary-dark))] mb-6 leading-none">
               <span className="text-gradient">Portfolio</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
@@ -608,7 +608,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-normal font-poppins text-[hsl(var(--secondary-dark))] mb-6 leading-none">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal font-poppins text-[hsl(var(--secondary-dark))] mb-6 leading-none">
               Get In <span className="text-gradient">Touch</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
