@@ -425,10 +425,10 @@ export default function Home() {
                   </h3>
                   
                   <div className="mb-6">
-                    <span className="text-4xl md:text-5xl font-normal font-poppins text-gradient">
+                    <span className="text-2xl md:text-3xl font-normal font-poppins text-gradient">
                       {plan.price}
                     </span>
-                    {plan.period && <span className="text-lg font-medium text-gray-500 ml-2">{plan.period}</span>}
+                    {plan.period && <span className="text-base font-medium text-gray-500 ml-2">{plan.period}</span>}
                   </div>
                   
                   {plan.description && (
