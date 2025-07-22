@@ -41,32 +41,12 @@ export default function Home() {
 
   const navItems = [
     { href: "#about", label: "About" },
-    { href: "#services", label: "Services" },
     { href: "#portfolio", label: "Portfolio" },
     { href: "#pricing", label: "Pricing" },
     { href: "#contact", label: "Contact" }
   ];
 
-  const services = [
-    {
-      icon: Monitor,
-      title: "Web Design",
-      description: "Custom website designs that capture your brand essence and engage your audience with stunning visuals.",
-      features: ["Custom Design", "Brand Integration", "User Experience"]
-    },
-    {
-      icon: Smartphone,
-      title: "Responsive Development",
-      description: "Mobile-first development ensuring your website looks perfect on all devices and screen sizes.",
-      features: ["Mobile Optimization", "Cross-browser Testing", "Performance Optimization"]
-    },
-    {
-      icon: Rocket,
-      title: "SEO Optimization",
-      description: "Search engine optimization to help your website rank higher and attract more organic traffic.",
-      features: ["On-page SEO", "Technical SEO", "Performance Metrics"]
-    }
-  ];
+
 
   const portfolioItems = [
     {
@@ -320,56 +300,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Services Section */}
-      <section id="services" className="py-20 bg-stone-100">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-[hsl(var(--secondary-dark))] mb-6">
-              Services
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Comprehensive web solutions tailored to your business needs
-            </p>
-          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-                whileHover={{ y: -8 }}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <div className="text-[hsl(var(--primary-brown))] mb-6">
-                  <service.icon size={48} />
-                </div>
-                <h3 className="text-xl font-semibold text-[hsl(var(--secondary-dark))] mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  {service.description}
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center">
-                      <Check className="h-4 w-4 text-[hsl(var(--accent-nude))] mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* Portfolio Section */}
       <section id="portfolio" className="py-20 bg-white">
         <div className="container mx-auto px-6">
