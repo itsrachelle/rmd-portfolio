@@ -361,8 +361,12 @@ export default function Home() {
                     <ul className="space-y-2">
                       {plan.features.map((feature) => (
                         <li key={feature} className="flex items-start">
-                          <Check className="h-4 w-4 text-[hsl(var(--primary-brown))] mr-2 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-700 text-sm">{feature}</span>
+                          {!feature.startsWith('*') && (
+                            <Check className="h-4 w-4 text-[hsl(var(--primary-brown))] mr-2 mt-0.5 flex-shrink-0" />
+                          )}
+                          <span className={`text-gray-700 text-sm ${feature.startsWith('*') ? 'italic' : ''}`}>
+                            {feature}
+                          </span>
                         </li>
                       ))}
                     </ul>
