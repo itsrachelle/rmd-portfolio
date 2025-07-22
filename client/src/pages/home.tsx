@@ -266,7 +266,7 @@ export default function Home() {
               Available for projects
             </motion.div>
             
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-normal font-poppins leading-none tracking-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-normal font-poppins leading-none tracking-tight">
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white">
                 Modern Website Design
               </span>
