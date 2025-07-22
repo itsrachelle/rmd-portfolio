@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -21,7 +22,8 @@ import {
   ExternalLink,
   FileText,
   Globe,
-  Settings
+  Settings,
+  Palette
 } from "lucide-react";
 
 import tempImageQe40RA from "@assets/tempImageQe40RA.png";
@@ -172,7 +174,7 @@ export default function Home() {
             </div>
             
             {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex space-x-8 items-center">
               {navItems.map((item) => (
                 <button
                   key={item.href}
@@ -184,6 +186,12 @@ export default function Home() {
                   {item.label}
                 </button>
               ))}
+              <Link href="/theme-generator">
+                <Button className="bg-[hsl(var(--primary-brown))] text-white hover:bg-[hsl(var(--primary-brown))]/90 text-sm px-4 py-2 h-auto">
+                  <Palette className="h-4 w-4 mr-2" />
+                  Themes
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -215,6 +223,12 @@ export default function Home() {
                     {item.label}
                   </button>
                 ))}
+                <Link href="/theme-generator">
+                  <Button className="w-full bg-[hsl(var(--primary-brown))] text-white hover:bg-[hsl(var(--primary-brown))]/90 justify-start">
+                    <Palette className="h-4 w-4 mr-2" />
+                    Color Themes
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           )}
@@ -253,6 +267,59 @@ export default function Home() {
           <ChevronDown className="h-8 w-8 text-white" />
         </motion.div>
       </section>
+
+      {/* Theme Generator Feature Callout */}
+      <section className="py-12 bg-gradient-to-r from-[hsl(var(--accent-nude))] to-white">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto"
+          >
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="bg-[hsl(var(--primary-brown))]/10 p-3 rounded-full">
+                    <Palette className="h-6 w-6 text-[hsl(var(--primary-brown))]" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-[hsl(var(--secondary-dark))]">
+                    New: Color Theme Generator
+                  </h3>
+                </div>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Personalize your website's look with our new theme generator. Choose from curated color palettes or create random combinations to match your brand perfectly.
+                </p>
+                <Link href="/theme-generator">
+                  <Button className="bg-[hsl(var(--primary-brown))] text-white hover:bg-[hsl(var(--primary-brown))]/90">
+                    <Palette className="h-4 w-4 mr-2" />
+                    Try Theme Generator
+                  </Button>
+                </Link>
+              </div>
+              <div className="grid grid-cols-3 gap-4">
+                {/* Sample color swatches */}
+                <div className="space-y-2">
+                  <div className="h-12 bg-gradient-to-b from-amber-700 to-amber-800 rounded-lg shadow"></div>
+                  <div className="h-12 bg-gradient-to-b from-amber-100 to-amber-200 rounded-lg shadow"></div>
+                  <div className="text-xs text-center text-gray-600 font-medium">Warm</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="h-12 bg-gradient-to-b from-blue-700 to-blue-800 rounded-lg shadow"></div>
+                  <div className="h-12 bg-gradient-to-b from-blue-100 to-blue-200 rounded-lg shadow"></div>
+                  <div className="text-xs text-center text-gray-600 font-medium">Ocean</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="h-12 bg-gradient-to-b from-green-700 to-green-800 rounded-lg shadow"></div>
+                  <div className="h-12 bg-gradient-to-b from-green-100 to-green-200 rounded-lg shadow"></div>
+                  <div className="text-xs text-center text-gray-600 font-medium">Forest</div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-20 bg-white">
         <div className="container mx-auto px-6">
