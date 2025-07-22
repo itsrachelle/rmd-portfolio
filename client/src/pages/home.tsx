@@ -330,13 +330,7 @@ export default function Home() {
                   plan.popular ? "border-2 border-[hsl(var(--primary-brown))]" : ""
                 }`}
               >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-[hsl(var(--primary-brown))] text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Popular
-                    </span>
-                  </div>
-                )}
+                
                 
                 <div className="text-center">
                   <div className="flex justify-center mb-4">
