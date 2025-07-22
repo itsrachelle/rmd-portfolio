@@ -8,6 +8,8 @@ This is a modern full-stack web application built with React, Express.js, and Ty
 
 Preferred communication style: Simple, everyday language.
 Design preferences: Warm nude and brown color scheme for modern, inviting aesthetic.
+Typography: Poppins font with normal weight for softer, more approachable headings.
+Content approach: Clean, streamlined design focused on core services without unnecessary elements.
 
 ## System Architecture
 
