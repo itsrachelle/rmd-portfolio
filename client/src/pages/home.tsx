@@ -271,7 +271,7 @@ export default function Home() {
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white text-[73px]">
                 Website
               </span>
-              <span className="block">Design</span>
+              <span className="block text-[73px]">Design</span>
             </h1>
             
             <motion.p 
