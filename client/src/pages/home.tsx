@@ -327,7 +327,7 @@ export default function Home() {
         </motion.div>
       </section>
       {/* About Section */}
-      <section id="about" className="py-24 bg-gradient-to-b from-white via-gray-50/30 to-white relative overflow-hidden section-modern">
+      <section id="about" className="py-24 bg-gradient-to-b from-blue-50/30 via-cyan-50/20 to-blue-50/30 relative overflow-hidden section-modern">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-7xl mx-auto">
             <motion.div
