@@ -26,13 +26,13 @@
   --ring: hsl(217, 91%, 60%);
   --radius: 0.5rem;
   
-  /* Custom colors for the design - Modern Nude and Brown scheme */
-  --primary-brown: 28 25% 23%;
-  --secondary-dark: 20 14.3% 4.1%;
-  --accent-nude: 30 30% 85%;
-  --hero-gradient-from: hsl(20, 14.3%, 4.1%);
-  --hero-gradient-to: hsl(28, 25%, 23%);
-  --surface: 30 20% 95%;
+  /* Custom colors for the design - Neutral scheme */
+  --primary-brown: 0 0% 15%;
+  --secondary-dark: 0 0% 9%;
+  --accent-nude: 0 0% 85%;
+  --hero-gradient-from: hsl(0, 0%, 9%);
+  --hero-gradient-to: hsl(0, 0%, 20%);
+  --surface: 0 0% 95%;
   
   /* Modern design elements */
   --glass-bg: rgba(255, 255, 255, 0.1);
@@ -84,7 +84,7 @@
   }
   
   .modern-hero-gradient {
-    background: linear-gradient(135deg, hsl(var(--secondary-dark)) 0%, hsl(var(--primary-brown)) 50%, hsl(15, 30%, 15%) 100%);
+    background: linear-gradient(135deg, hsl(var(--secondary-dark)) 0%, hsl(var(--primary-brown)) 50%, hsl(0, 0%, 25%) 100%);
   }
   
   .glass-card {
