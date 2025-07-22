@@ -95,11 +95,12 @@ export default function Home() {
       price: "$100",
       period: "per month",
       icon: Settings,
-      description: "*Service only available after website set up\nKeep your site fresh, up-to-date, and running smoothly - without lifting a finger.",
+      description: "Keep your site fresh, up-to-date, and running smoothly - without lifting a finger.",
       features: [
         "Up to 3 content updates per month (text, photos, menus, seasonal offers, etc.)",
         "Add new sections (e.g. an about page, blog posts, or promotions)",
-        "Basic performance and upkeep monitoring"
+        "Basic performance and upkeep monitoring",
+        "*Service only available after website set up"
       ],
       popular: false
     }
