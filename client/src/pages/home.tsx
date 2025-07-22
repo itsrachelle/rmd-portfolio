@@ -271,7 +271,7 @@ export default function Home() {
               Available for projects
             </motion.div>
             
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black font-poppins leading-none tracking-tight">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold font-poppins leading-none tracking-tight">
               <span className="block">Modern</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white">
                 Website
@@ -314,24 +314,7 @@ export default function Home() {
               </Button>
             </motion.div>
             
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2, duration: 0.6 }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 max-w-2xl mx-auto"
-            >
-              {[
-                { number: "50+", label: "Projects Delivered" },
-                { number: "48hrs", label: "Average Turnaround" },
-                { number: "100%", label: "Client Satisfaction" }
-              ].map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold font-poppins text-white">{stat.number}</div>
-                  <div className="text-sm md:text-base text-white/70 font-medium">{stat.label}</div>
-                </div>
-              ))}
-            </motion.div>
+
           </motion.div>
         </div>
         
@@ -473,7 +456,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="text-center mb-20"
             >
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-black font-poppins text-[hsl(var(--secondary-dark))] mb-6 leading-none">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold font-poppins text-[hsl(var(--secondary-dark))] mb-6 leading-none">
                 About <span className="text-gradient">Me</span>
               </h2>
               <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
@@ -525,7 +508,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-black font-poppins text-[hsl(var(--secondary-dark))] mb-6 leading-none">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold font-poppins text-[hsl(var(--secondary-dark))] mb-6 leading-none">
               <span className="text-gradient">Services</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
@@ -567,7 +550,7 @@ export default function Home() {
                   </h3>
                   
                   <div className="mb-6">
-                    <span className="text-4xl md:text-5xl font-black font-poppins text-gradient">
+                    <span className="text-4xl md:text-5xl font-bold font-poppins text-gradient">
                       {plan.price}
                     </span>
                     {plan.period && <span className="text-lg font-medium text-gray-500 ml-2">{plan.period}</span>}
@@ -664,7 +647,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-black font-poppins text-[hsl(var(--secondary-dark))] mb-6 leading-none">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold font-poppins text-[hsl(var(--secondary-dark))] mb-6 leading-none">
               <span className="text-gradient">Portfolio</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
@@ -741,7 +724,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-black font-poppins text-[hsl(var(--secondary-dark))] mb-6 leading-none">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold font-poppins text-[hsl(var(--secondary-dark))] mb-6 leading-none">
               Get In <span className="text-gradient">Touch</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
@@ -883,7 +866,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="mb-12"
             >
-              <div className="text-5xl font-black font-poppins mb-6">
+              <div className="text-5xl font-bold font-poppins mb-6">
                 <span className="text-gradient">Design</span>Pro
               </div>
               <p className="text-xl text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">
