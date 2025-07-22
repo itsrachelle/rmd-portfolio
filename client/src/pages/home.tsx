@@ -484,25 +484,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="bg-[hsl(var(--primary-brown))]/10 p-3 rounded-lg">
-                  <Phone className="h-6 w-6 text-[hsl(var(--primary-brown))]" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-[hsl(var(--secondary-dark))] mb-2">Phone</h3>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
-                </div>
-              </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="bg-[hsl(var(--primary-brown))]/10 p-3 rounded-lg">
-                  <MapPin className="h-6 w-6 text-[hsl(var(--primary-brown))]" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-[hsl(var(--secondary-dark))] mb-2">Location</h3>
-                  <p className="text-gray-600">San Francisco, CA</p>
-                </div>
-              </div>
             </motion.div>
 
             <motion.div
@@ -552,21 +534,7 @@ export default function Home() {
                   />
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-[hsl(var(--secondary-dark))] mb-2">
-                    Project Budget
-                  </label>
-                  <Select value={formData.budget} onValueChange={(value) => setFormData({ ...formData, budget: value })}>
-                    <SelectTrigger className="w-full">
-                      <SelectValue placeholder="Select Budget Range" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="2000-5000">$2,000 - $5,000</SelectItem>
-                      <SelectItem value="5000-10000">$5,000 - $10,000</SelectItem>
-                      <SelectItem value="10000+">$10,000+</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+
 
                 <div>
                   <label className="block text-sm font-medium text-[hsl(var(--secondary-dark))] mb-2">
