@@ -287,7 +287,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9, duration: 0.6 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-6"
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-12 pb-16"
             >
               <Button
                 onClick={() => scrollToSection("#portfolio")}
