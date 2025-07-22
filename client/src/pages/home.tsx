@@ -23,7 +23,11 @@ import {
   FileText,
   Globe,
   Settings,
-  Palette
+  Palette,
+  Star,
+  Zap,
+  Shield,
+  Users
 } from "lucide-react";
 
 import tempImageQe40RA from "@assets/tempImageQe40RA.png";
@@ -529,32 +533,44 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 50, rotateY: -10 }}
+                whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-                className={`bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 relative ${
-                  plan.popular ? "border-2 border-[hsl(var(--primary-brown))]" : ""
+                transition={{ delay: index * 0.2, duration: 0.8 }}
+                className={`card-modern p-8 hover:shadow-2xl hover:scale-105 transition-all duration-500 relative group perspective-1000 ${
+                  plan.popular ? "ring-2 ring-[hsl(var(--primary-brown))]/50 ring-offset-4" : ""
                 }`}
               >
                 
                 
-                <div className="text-center">
-                  <div className="flex justify-center mb-4">
-                    <div className="w-14 h-14 bg-[hsl(var(--accent-nude))] rounded-full flex items-center justify-center">
-                      <plan.icon className="h-7 w-7 text-[hsl(var(--primary-brown))]" />
+                <div className="text-center relative">
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-[hsl(var(--primary-brown))] to-[hsl(var(--secondary-dark))] text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                        ⭐ Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="flex justify-center mb-6 mt-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-[hsl(var(--primary-brown))] to-[hsl(var(--secondary-dark))] rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                      <plan.icon className="h-8 w-8 text-white" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-[hsl(var(--secondary-dark))] mb-3">
+                  
+                  <h3 className="text-2xl font-bold font-space text-[hsl(var(--secondary-dark))] mb-4">
                     {plan.name}
                   </h3>
-                  <div className="text-3xl font-bold text-[hsl(var(--primary-brown))] mb-4">
-                    {plan.price}
-                    {plan.period && <span className="text-base font-normal text-gray-600"> {plan.period}</span>}
+                  
+                  <div className="mb-6">
+                    <span className="text-4xl md:text-5xl font-black font-space text-gradient">
+                      {plan.price}
+                    </span>
+                    {plan.period && <span className="text-lg font-medium text-gray-500 ml-2">{plan.period}</span>}
                   </div>
                   
                   {plan.description && (
@@ -567,20 +583,29 @@ export default function Home() {
                     </div>
                   )}
                   
-                  <div className="text-left mb-4">
-                    <h4 className="font-semibold text-[hsl(var(--secondary-dark))] mb-2 text-sm">
+                  <div className="text-left mb-6">
+                    <h4 className="font-bold font-space text-[hsl(var(--secondary-dark))] mb-4 text-base">
                       {plan.name === "Basic 3–5 Page Website" ? "What's included:" : "Includes:"}
                     </h4>
-                    <ul className="space-y-2">
-                      {plan.features.map((feature) => (
-                        <li key={feature} className="flex items-start">
+                    <ul className="space-y-3">
+                      {plan.features.map((feature, featureIndex) => (
+                        <motion.li
+                          key={feature}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: 0.1 * featureIndex, duration: 0.4 }}
+                          className="flex items-start"
+                        >
                           {!feature.startsWith('*') && (
-                            <Check className="h-4 w-4 text-[hsl(var(--primary-brown))] mr-2 mt-0.5 flex-shrink-0" />
+                            <div className="w-5 h-5 bg-gradient-to-r from-[hsl(var(--primary-brown))] to-[hsl(var(--secondary-dark))] rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                              <Check className="h-3 w-3 text-white" />
+                            </div>
                           )}
-                          <span className={`text-gray-700 text-sm ${feature.startsWith('*') ? 'italic' : ''}`}>
+                          <span className={`text-gray-700 ${feature.startsWith('*') ? 'italic text-gray-600' : 'font-medium'} leading-relaxed`}>
                             {feature}
                           </span>
-                        </li>
+                        </motion.li>
                       ))}
                     </ul>
                   </div>
@@ -591,34 +616,59 @@ export default function Home() {
           
           {/* Custom Work Section */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true }}
-            className="text-center mt-16 bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto"
+            transition={{ duration: 0.8 }}
+            className="text-center mt-20 card-modern p-10 max-w-3xl mx-auto relative overflow-hidden group"
           >
-            <h3 className="text-2xl font-bold text-[hsl(var(--secondary-dark))] mb-4">
-              Need something custom?
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              Get in touch - I'd love to hear what you need and help make it happen!
-            </p>
+            {/* Background decoration */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--primary-brown))]/5 via-transparent to-[hsl(var(--secondary-dark))]/5 group-hover:from-[hsl(var(--primary-brown))]/10 group-hover:to-[hsl(var(--secondary-dark))]/10 transition-all duration-500"></div>
+            
+            <div className="relative z-10">
+              <div className="inline-flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-[hsl(var(--primary-brown))] to-[hsl(var(--secondary-dark))] rounded-2xl flex items-center justify-center">
+                  <Star className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-3xl font-bold font-space text-[hsl(var(--secondary-dark))]">
+                  Need something <span className="text-gradient">custom?</span>
+                </h3>
+              </div>
+              
+              <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                Let's discuss your unique vision and create something extraordinary together!
+              </p>
+              
+              <Button
+                onClick={() => scrollToSection("#contact")}
+                className="btn-modern text-lg px-8 py-3 shadow-xl group"
+              >
+                Let's Talk Custom Projects
+                <ArrowRight className="h-5 w-5 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
+              </Button>
+            </div>
+            
+            {/* Floating elements */}
+            <div className="absolute top-4 right-4 w-8 h-8 bg-[hsl(var(--accent-nude))]/20 rounded-full floating-animation blur-sm"></div>
+            <div className="absolute bottom-4 left-4 w-6 h-6 bg-[hsl(var(--primary-brown))]/20 rounded-full floating-animation blur-sm" style={{ animationDelay: '3s' }}></div>
           </motion.div>
         </div>
       </section>
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 bg-white">
-        <div className="container mx-auto px-6">
+      <section id="portfolio" className="py-24 bg-gradient-to-b from-white via-gray-50/20 to-white relative overflow-hidden section-modern">
+        <div className="container mx-auto px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[hsl(var(--secondary-dark))] mb-6">
-              Portfolio
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-black font-space text-[hsl(var(--secondary-dark))] mb-6 leading-none">
+              <span className="text-gradient">Portfolio</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Recent projects showcasing modern design and functionality
+            <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
+              Recent projects showcasing modern design and powerful functionality
             </p>
           </motion.div>
 
@@ -626,34 +676,55 @@ export default function Home() {
             {portfolioItems.map((item, index) => (
               <motion.div
                 key={item.companyName}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden max-w-md"
+                transition={{ delay: index * 0.2, duration: 0.8 }}
+                className="card-modern overflow-hidden max-w-lg group hover:scale-105 hover:shadow-2xl transition-all duration-500"
               >
                 <div className="relative overflow-hidden">
                   <img
                     src={item.image}
                     alt={`${item.companyName} website screenshot`}
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
+                  {/* Overlay gradient on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  {/* Floating view button */}
+                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                    <a
+                      href={item.liveUrl}
+                      className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm text-[hsl(var(--secondary-dark))] px-4 py-2 rounded-full font-semibold hover:bg-white transition-colors duration-200 shadow-lg"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      View Live
+                    </a>
+                  </div>
                 </div>
                 
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-[hsl(var(--secondary-dark))] mb-3">
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold font-space text-[hsl(var(--secondary-dark))] mb-4">
                     {item.companyName}
                   </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed text-lg">
                     {item.description}
                   </p>
-                  <a
-                    href={item.liveUrl}
-                    className="inline-flex items-center text-[hsl(var(--primary-brown))] hover:text-[hsl(var(--primary-brown))]/80 font-medium transition-colors duration-200"
-                  >
-                    Live Preview
-                    <ExternalLink className="h-4 w-4 ml-2" />
-                  </a>
+                  
+                  <div className="flex items-center justify-between">
+                    <a
+                      href={item.liveUrl}
+                      className="inline-flex items-center gap-2 text-[hsl(var(--primary-brown))] hover:text-[hsl(var(--secondary-dark))] font-bold transition-colors duration-300 group/link"
+                    >
+                      Live Preview
+                      <ExternalLink className="h-4 w-4 group-hover/link:translate-x-1 transition-transform duration-300" />
+                    </a>
+                    
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                      <span className="text-sm font-medium text-gray-500">Live</span>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -661,47 +732,79 @@ export default function Home() {
         </div>
       </section>
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
-        <div className="container mx-auto px-6">
+      <section id="contact" className="py-24 bg-gradient-to-br from-gray-50 via-white to-[hsl(var(--surface))]/30 relative overflow-hidden section-modern">
+        <div className="container mx-auto px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[hsl(var(--secondary-dark))] mb-6">
-              Get In Touch
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-black font-space text-[hsl(var(--secondary-dark))] mb-6 leading-none">
+              Get In <span className="text-gradient">Touch</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Ready to create your website? Let's discuss how I can help bring your vision to life!</p>
+            <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
+              Ready to create your website? Let's discuss how I can help bring your vision to life!
+            </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-8"
+              transition={{ duration: 0.8 }}
+              className="space-y-10"
             >
-              <div className="flex items-start space-x-4">
-                <div className="bg-[hsl(var(--primary-brown))]/10 p-3 rounded-lg">
-                  <Mail className="h-6 w-6 text-[hsl(var(--primary-brown))]" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-[hsl(var(--secondary-dark))] mb-2">Email</h3>
-                  <p className="text-gray-600">itsrachellenaomi@gmail.com</p>
-                </div>
+              <div className="space-y-8">
+                <h3 className="text-3xl font-bold font-space text-[hsl(var(--secondary-dark))] mb-8">
+                  Let's Start Your Project
+                </h3>
+                
+                {[
+                  { icon: Mail, title: "Email", info: "hello@designpro.com", description: "Drop me a line anytime" },
+                  { icon: Phone, title: "Phone", info: "+1 (555) 123-4567", description: "Call for immediate consultation" },
+                  { icon: MapPin, title: "Location", info: "Remote + Local", description: "Serving clients worldwide" }
+                ].map((contact, index) => (
+                  <motion.div
+                    key={contact.title}
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.2, duration: 0.6 }}
+                    className="flex items-start gap-6 group"
+                  >
+                    <div className="w-14 h-14 bg-gradient-to-r from-[hsl(var(--primary-brown))] to-[hsl(var(--secondary-dark))] rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
+                      <contact.icon className="h-7 w-7 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-xl font-bold font-space text-[hsl(var(--secondary-dark))] mb-2">{contact.title}</h4>
+                      <p className="text-lg font-medium text-gray-800 mb-1">{contact.info}</p>
+                      <p className="text-sm text-gray-500">{contact.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
-
-
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-stone-50 rounded-2xl p-8"
+              transition={{ duration: 0.8 }}
+              className="card-modern p-10"
             >
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold font-space text-[hsl(var(--secondary-dark))] mb-4">
+                  Send a Message
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Tell me about your project and I'll get back to you within 24 hours.
+                </p>
+              </div>
+              
+              <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-[hsl(var(--secondary-dark))] mb-2">
@@ -759,9 +862,10 @@ export default function Home() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-[hsl(var(--primary-brown))] text-white hover:bg-[hsl(var(--primary-brown))]/90 py-3 font-semibold"
+                  className="w-full btn-modern text-lg py-4 px-8 font-bold shadow-xl group hover:shadow-2xl"
                 >
                   Send Message
+                  <ArrowRight className="h-5 w-5 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
               </form>
             </motion.div>
@@ -769,30 +873,59 @@ export default function Home() {
         </div>
       </section>
       {/* Footer */}
-      <footer className="bg-[hsl(var(--secondary-dark))] text-white py-12">
-        <div className="container mx-auto px-6">
+      <footer className="bg-gradient-to-t from-[hsl(var(--secondary-dark))] via-[hsl(var(--secondary-dark))]/95 to-[hsl(var(--secondary-dark))]/90 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--primary-brown))]/5 via-transparent to-transparent"></div>
+        <div className="container mx-auto px-6 relative z-10">
           <div className="text-center">
-            <div className="text-3xl font-bold mb-4">
-              <span className="text-[hsl(var(--primary-brown))]">Design</span>Pro
-            </div>
-            <p className="text-gray-400 mb-6">
-              Creating beautiful, functional websites that drive results.
-            </p>
-            <div className="flex justify-center space-x-6 mb-8">
-              {navItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-            <div className="border-t border-gray-700 pt-8">
-              <p className="text-gray-400 text-sm">
-                © 2024 DesignPro. All rights reserved.
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <div className="text-5xl font-black font-space mb-6">
+                <span className="text-gradient">Design</span>Pro
+              </div>
+              <p className="text-xl text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">
+                Creating beautiful, functional websites that drive results and elevate your brand.
               </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="flex justify-center space-x-10 mb-16"
+            >
+              {navItems.map((item, index) => (
+                <motion.button
+                  key={item.href}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 * index }}
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-gray-300 hover:text-white text-lg font-medium transition-all duration-300 hover:scale-110 group"
+                >
+                  <span className="relative">
+                    {item.label}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[hsl(var(--primary-brown))] to-[hsl(var(--surface))] group-hover:w-full transition-all duration-300"></span>
+                  </span>
+                </motion.button>
+              ))}
+            </motion.div>
+            
+            <div className="border-t border-gray-600/30 pt-12">
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+                className="text-gray-400 text-lg font-light"
+              >
+                © 2025 DesignPro. All rights reserved.
+              </motion.p>
             </div>
           </div>
         </div>
