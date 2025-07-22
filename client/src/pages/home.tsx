@@ -267,7 +267,7 @@ export default function Home() {
             </motion.div>
             
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-normal font-poppins leading-none tracking-tight">
-              <span className="block">Modern</span>
+              <span className="block text-[73px]">Modern</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white">
                 Website
               </span>
@@ -329,9 +329,6 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </section>
-
-
-
       {/* About Section */}
       <section id="about" className="py-24 bg-gradient-to-b from-white via-gray-50/30 to-white relative overflow-hidden section-modern">
         <div className="container mx-auto px-6 relative z-10">
