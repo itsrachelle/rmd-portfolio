@@ -297,6 +297,15 @@ export default function Home() {
               </Button>
               
               <Button
+                onClick={() => scrollToSection("#services")}
+                size="lg"
+                variant="outline"
+                className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-10 py-5 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105"
+              >
+                Services
+              </Button>
+              
+              <Button
                 onClick={() => scrollToSection("#contact")}
                 size="lg"
                 variant="outline"
