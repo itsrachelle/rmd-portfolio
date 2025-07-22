@@ -824,7 +824,7 @@ export default function Home() {
                   <Textarea
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tell me about your project..."
+                    placeholder="Describe the type of website you would like to create in as much detail as possible"
                     className="w-full min-h-[120px]"
                     required
                   />
