@@ -91,7 +91,7 @@ export default function Home() {
       popular: true
     },
     {
-      name: "Website management",
+      name: "Website management*",
       price: "$100",
       period: "per month",
       icon: Settings,
