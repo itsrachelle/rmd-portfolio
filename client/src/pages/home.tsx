@@ -79,37 +79,40 @@ export default function Home() {
       name: "One-Page Website",
       price: "$200",
       period: "",
-      description: "A sleek, modern one-page site designed to tell your story and drive action. Perfect for small businesses, consultants, or personal brands just getting started online.",
+      description: "A sleek, modern one-page site designed to capture your brand essence and drive action.\n\nPerfect for small businesses, consultants, or personal brands just getting started online.",
       features: [
         "Full website setup and design",
-        "Clean, responsive layout optimized for mobile",
+        "Brand Integration",
+        "Mobile-friendly design",
         "Basic SEO setup",
         "Hosting and domain setup support"
       ],
       popular: false
     },
     {
-      name: "Basic 3–5 Page Website",
-      price: "$400-$600",
+      name: "3–5 Page Website",
+      price: "$400 - $600",
       period: "",
       description: "A fully customized website (up to 5 pages) to showcase your brand and convert visitors.",
       features: [
         "Website setup and design",
-        "Up to 5 pages (e.g., Home, Services/Menu, About, Contact, Blog or Booking)",
+        "Up to 5 pages (e.g., Home, Services/Menu, About, Contact, Blog, Booking)",
+        "Full website setup and design",
+        "Brand Integration",
         "Mobile-friendly design",
-        "Basic SEO",
+        "Basic SEO setup",
         "Hosting and domain setup support"
       ],
       popular: true
     },
     {
-      name: "Ongoing Website Management",
+      name: "Website management",
       price: "$100",
       period: "per month",
-      description: "Keep your site fresh, up-to-date, and running smoothly — without lifting a finger.",
+      description: "Service only available after website set up\nKeep your site fresh, up-to-date, and running smoothly - without lifting a finger.",
       features: [
         "Up to 3 content updates per month (text, photos, menus, seasonal offers, etc.)",
-        "Add new sections like an About page, blog posts, or promotions",
+        "Add new sections (e.g. an about page, blog posts, or promotions)",
         "Basic performance and upkeep monitoring"
       ],
       popular: false
@@ -463,9 +466,13 @@ export default function Home() {
                   </div>
                   
                   {plan.description && (
-                    <p className="text-gray-600 mb-6 text-left leading-relaxed">
-                      {plan.description}
-                    </p>
+                    <div className="text-gray-600 mb-6 text-left leading-relaxed">
+                      {plan.description.split('\n').map((line, index) => (
+                        <p key={index} className={index > 0 ? 'mt-3' : ''}>
+                          {line}
+                        </p>
+                      ))}
+                    </div>
                   )}
                   
                   <div className="text-left mb-6">
