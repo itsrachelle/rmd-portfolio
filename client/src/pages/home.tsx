@@ -325,7 +325,6 @@ export default function Home() {
             transition={{ repeat: Infinity, duration: 2 }}
             className="flex flex-col items-center gap-2 text-white/60"
           >
-            <span className="text-sm font-medium">Scroll to explore</span>
             <ChevronDown className="h-6 w-6" />
           </motion.div>
         </motion.div>
