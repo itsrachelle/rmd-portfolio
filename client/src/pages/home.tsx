@@ -18,7 +18,10 @@ import {
   ChevronDown,
   ArrowRight,
   Check,
-  ExternalLink
+  ExternalLink,
+  FileText,
+  Globe,
+  Settings
 } from "lucide-react";
 
 import tempImageQe40RA from "@assets/tempImageQe40RA.png";
@@ -79,6 +82,7 @@ export default function Home() {
       name: "One-Page Website",
       price: "$200",
       period: "",
+      icon: FileText,
       description: "A sleek, modern one-page site designed to capture your brand essence and drive action.\n\nPerfect for small businesses, consultants, or personal brands just getting started online.",
       features: [
         "Full website setup and design",
@@ -93,6 +97,7 @@ export default function Home() {
       name: "3–5 Page Website",
       price: "$400 - $600",
       period: "",
+      icon: Globe,
       description: "A fully customized website (up to 5 pages) to showcase your brand and convert visitors.",
       features: [
         "Website setup and design",
@@ -109,6 +114,7 @@ export default function Home() {
       name: "Website management",
       price: "$100",
       period: "per month",
+      icon: Settings,
       description: "Service only available after website set up\nKeep your site fresh, up-to-date, and running smoothly - without lifting a finger.",
       features: [
         "Up to 3 content updates per month (text, photos, menus, seasonal offers, etc.)",
@@ -457,6 +463,11 @@ export default function Home() {
                 )}
                 
                 <div className="text-center">
+                  <div className="flex justify-center mb-6">
+                    <div className="w-16 h-16 bg-[hsl(var(--accent-nude))] rounded-full flex items-center justify-center">
+                      <plan.icon className="h-8 w-8 text-[hsl(var(--primary-brown))]" />
+                    </div>
+                  </div>
                   <h3 className="text-2xl font-bold text-[hsl(var(--secondary-dark))] mb-4">
                     {plan.name}
                   </h3>
