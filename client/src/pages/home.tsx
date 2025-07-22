@@ -238,7 +238,7 @@ export default function Home() {
         </AnimatePresence>
       </nav>
       {/* Hero Section */}
-      <section className="modern-hero-gradient min-h-screen flex items-center justify-center text-white relative overflow-hidden">
+      <section className="modern-hero-gradient min-h-[70vh] flex items-center justify-center text-white relative overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full floating-animation" style={{ animationDelay: '0s' }}></div>
