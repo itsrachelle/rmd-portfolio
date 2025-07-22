@@ -255,16 +255,7 @@ export default function Home() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="space-y-8 pt-8"
           >
-            {/* Hero badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 text-sm font-medium"
-            >
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-              Available for projects
-            </motion.div>
+
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-normal font-poppins leading-none tracking-tight">
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white">
