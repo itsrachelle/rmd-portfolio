@@ -300,7 +300,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-stone-100">
         <div className="container mx-auto px-6">
@@ -313,9 +312,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-[hsl(var(--secondary-dark))] mb-6">
               Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Transparent pricing for quality web design services
-            </p>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Modern Websites That Do the Work for You</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -400,7 +397,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* Portfolio Section */}
       <section id="portfolio" className="py-20 bg-white">
         <div className="container mx-auto px-6">
