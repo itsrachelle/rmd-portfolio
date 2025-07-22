@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 
 import tempImageQe40RA from "@assets/tempImageQe40RA.png";
+import stretchInspireScreenshot from "@assets/Screenshot 2025-07-22 at 14.22.05_1753208599743.png";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -68,7 +69,7 @@ export default function Home() {
     {
       companyName: "Stretch Inspire BLOG",
       description: "5-page site with blog, contact, and embedded subscription option.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      image: stretchInspireScreenshot,
       liveUrl: "https://www.stretchinspire.com/"
     }
   ];
