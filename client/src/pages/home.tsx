@@ -366,16 +366,6 @@ export default function Home() {
                       ))}
                     </ul>
                   </div>
-                  
-                  <Button
-                    className={`w-full py-3 font-semibold transition-colors duration-200 ${
-                      plan.popular
-                        ? "bg-[hsl(var(--primary-brown))] text-white hover:bg-[hsl(var(--primary-brown))]/90"
-                        : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                    }`}
-                  >
-                    Get Started
-                  </Button>
                 </div>
               </motion.div>
             ))}
