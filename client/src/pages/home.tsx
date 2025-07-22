@@ -267,11 +267,9 @@ export default function Home() {
             </motion.div>
             
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-normal font-poppins leading-none tracking-tight">
-              <span className="block text-[73px]">Modern</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white text-[73px]">
-                Website
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white">
+                Modern Website Design
               </span>
-              <span className="block text-[73px]">Design</span>
             </h1>
             
             <motion.p 
