@@ -531,13 +531,7 @@ export default function Home() {
                 
                 
                 <div className="text-center relative">
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-[hsl(var(--primary-brown))] to-[hsl(var(--secondary-dark))] text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
-                        ⭐ Most Popular
-                      </span>
-                    </div>
-                  )}
+
                   
                   <div className="flex justify-center mb-6 mt-4">
                     <div className="w-16 h-16 bg-gradient-to-r from-[hsl(var(--primary-brown))] to-[hsl(var(--secondary-dark))] rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
