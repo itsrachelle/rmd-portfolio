@@ -280,8 +280,7 @@ export default function Home() {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="text-xl md:text-2xl lg:text-3xl font-light max-w-4xl mx-auto leading-relaxed text-white/90"
             >
-              Crafting <span className="font-semibold text-white">beautiful, mobile-friendly</span> websites 
-              that convert visitors into customers in <span className="font-semibold text-white">less than 3 days</span>
+              Fast, functional, and beautifully designed websites - ready in just days.
             </motion.p>
             
             <motion.div
