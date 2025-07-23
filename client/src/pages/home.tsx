@@ -373,7 +373,7 @@ export default function Home() {
                 <img
                   src={tempImageQe40RA}
                   alt="Professional headshot"
-                  className="rounded-2xl shadow-2xl w-3/4 h-auto max-w-sm"
+                  className="rounded-2xl shadow-2xl w-3/4 md:w-5/6 h-auto max-w-sm md:max-w-md"
                 />
               </motion.div>
 
