@@ -376,7 +376,7 @@ export default function Home() {
         </div>
         
         {/* Background decorations */}
-        <div className="absolute top-32 left-0 w-1/4 h-40 bg-gradient-to-r from-[hsl(var(--accent-nude))]/10 to-transparent rounded-r-full"></div>
+        <div className="absolute top-32 left-0 w-1/4 h-40 bg-gradient-to-r from-[hsl(var(--accent-blue))]/10 to-transparent rounded-r-full"></div>
         <div className="absolute bottom-20 right-0 w-1/3 h-32 bg-gradient-to-l from-[hsl(var(--primary-blue))]/5 to-transparent rounded-l-full"></div>
       </section>
       {/* Services Section */}
@@ -507,7 +507,7 @@ export default function Home() {
             </div>
             
             {/* Floating elements */}
-            <div className="absolute top-4 right-4 w-8 h-8 bg-[hsl(var(--accent-nude))]/20 rounded-full floating-animation blur-sm"></div>
+            <div className="absolute top-4 right-4 w-8 h-8 bg-[hsl(var(--accent-blue))]/20 rounded-full floating-animation blur-sm"></div>
             <div className="absolute bottom-4 left-4 w-6 h-6 bg-[hsl(var(--primary-blue))]/20 rounded-full floating-animation blur-sm" style={{ animationDelay: '3s' }}></div>
           </motion.div>
         </div>
@@ -579,7 +579,7 @@ export default function Home() {
                     </a>
                     
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                      <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
                       <span className="text-sm font-medium text-gray-500">Live</span>
                     </div>
                   </div>

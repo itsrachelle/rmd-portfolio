@@ -124,7 +124,7 @@
   
   .section-modern::before {
     content: '';
-    @apply absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[hsl(var(--primary-brown))] to-transparent;
+    @apply absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[hsl(var(--primary-blue))] to-transparent;
   }
 }
 
