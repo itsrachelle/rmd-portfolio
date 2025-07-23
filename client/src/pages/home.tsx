@@ -327,7 +327,7 @@ export default function Home() {
         </motion.div>
       </section>
       {/* About Section */}
-      <section id="about" className="py-24 bg-gradient-to-b from-orange-50/40 via-yellow-50/30 to-orange-50/40 relative overflow-hidden section-modern">
+      <section id="about" className="py-24 bg-gradient-to-b from-yellow-50/50 via-amber-50/40 to-yellow-50/50 relative overflow-hidden section-modern">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -513,7 +513,7 @@ export default function Home() {
         </div>
       </section>
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-24 bg-gradient-to-b from-amber-50/30 via-orange-50/20 to-amber-50/30 relative overflow-hidden section-modern">
+      <section id="portfolio" className="py-24 bg-gradient-to-b from-yellow-50/40 via-lime-50/30 to-yellow-50/40 relative overflow-hidden section-modern">
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 40 }}

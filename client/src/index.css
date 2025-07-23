@@ -26,13 +26,13 @@
   --ring: hsl(217, 91%, 60%);
   --radius: 0.5rem;
   
-  /* Custom colors for the design - Warm bright scheme */
-  --primary-brown: 25 85% 65%;
-  --secondary-dark: 15 90% 55%;
-  --accent-nude: 45 100% 90%;
-  --hero-gradient-from: hsl(25, 85%, 65%);
-  --hero-gradient-to: hsl(15, 90%, 55%);
-  --surface: 45 60% 98%;
+  /* Custom colors for the design - Warm yellow scheme */
+  --primary-brown: 45 95% 70%;
+  --secondary-dark: 50 90% 60%;
+  --accent-nude: 55 100% 92%;
+  --hero-gradient-from: hsl(45, 95%, 70%);
+  --hero-gradient-to: hsl(50, 90%, 60%);
+  --surface: 55 70% 98%;
   
   /* Modern design elements */
   --glass-bg: rgba(255, 255, 255, 0.1);
@@ -84,7 +84,7 @@
   }
   
   .modern-hero-gradient {
-    background: linear-gradient(135deg, hsl(var(--secondary-dark)) 0%, hsl(var(--primary-brown)) 50%, hsl(35, 80%, 70%) 100%);
+    background: linear-gradient(135deg, hsl(var(--secondary-dark)) 0%, hsl(var(--primary-brown)) 50%, hsl(48, 85%, 75%) 100%);
   }
   
   .glass-card {
@@ -95,8 +95,8 @@
   }
   
   .card-modern {
-    @apply bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-500 border border-orange-100;
-    box-shadow: 0 4px 20px rgba(255, 165, 100, 0.15);
+    @apply bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-500 border border-yellow-100;
+    box-shadow: 0 4px 20px rgba(255, 235, 100, 0.15);
   }
   
   .text-gradient {
