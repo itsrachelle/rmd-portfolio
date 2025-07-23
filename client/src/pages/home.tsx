@@ -239,14 +239,22 @@ export default function Home() {
       </nav>
       {/* Hero Section */}
       <section className="modern-hero-gradient min-h-[70vh] flex items-center justify-center text-white relative overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full floating-animation" style={{ animationDelay: '0s' }}></div>
-          <div className="absolute top-40 right-32 w-24 h-24 bg-white rounded-full floating-animation" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute bottom-32 left-1/3 w-16 h-16 bg-white rounded-full floating-animation" style={{ animationDelay: '4s' }}></div>
+        {/* Dynamic animated background elements */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full floating-animation pulse-animation" style={{ animationDelay: '0s' }}></div>
+          <div className="absolute top-40 right-32 w-24 h-24 bg-white rounded-full floating-animation scale-animation" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute bottom-32 left-1/3 w-16 h-16 bg-white rounded-full floating-animation rotate-animation" style={{ animationDelay: '4s' }}></div>
+          <div className="absolute top-1/2 left-10 w-20 h-20 bg-white/50 rounded-full floating-animation fade-animation" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-20 right-20 w-12 h-12 bg-white/70 rounded-full floating-animation bounce-animation" style={{ animationDelay: '3s' }}></div>
         </div>
         
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/20"></div>
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/30 animate-pulse-slow"></div>
+        
+        {/* Dynamic mesh gradient background */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-400/20 via-transparent to-cyan-400/20 animate-gradient-shift"></div>
+        </div>
         
         <div className="container mx-auto px-6 text-center relative z-10 max-w-6xl">
           <motion.div
@@ -258,7 +266,7 @@ export default function Home() {
 
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-normal font-poppins leading-tight tracking-tight pb-2">
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-white animate-text-shimmer bg-[length:200%_100%]">
                 Modern Website Design
               </span>
             </h1>
@@ -267,9 +275,16 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className="text-xl md:text-2xl lg:text-3xl font-light max-w-4xl mx-auto leading-relaxed text-white/90"
+              className="text-xl md:text-2xl lg:text-3xl font-light max-w-4xl mx-auto leading-relaxed text-white/90 hover:text-white transition-colors duration-500"
             >
-              Fast, functional, and beautifully designed websites - ready in just days.
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2, duration: 0.6 }}
+                className="inline-block"
+              >
+                Fast, functional, and beautifully designed websites - ready in just days.
+              </motion.span>
             </motion.p>
             
             <motion.div
