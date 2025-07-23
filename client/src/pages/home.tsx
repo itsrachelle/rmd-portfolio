@@ -368,11 +368,12 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
+                className="flex justify-center"
               >
                 <img
                   src={tempImageQe40RA}
                   alt="Professional headshot"
-                  className="rounded-2xl shadow-2xl w-full h-auto"
+                  className="rounded-2xl shadow-2xl w-3/4 h-auto max-w-sm"
                 />
               </motion.div>
 
