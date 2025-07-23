@@ -171,9 +171,9 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-xl border-0 shadow-lg z-50 transition-all duration-300">
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-6 py-5">
           <div className="flex justify-between items-center">
-            <div className="text-3xl font-normal font-poppins tracking-tight">
+            <div className="text-3xl font-normal font-poppins tracking-tight leading-relaxed">
               <span className="text-gradient">Design</span>
               <span className="text-[hsl(var(--secondary-dark))]">Pro</span>
             </div>
