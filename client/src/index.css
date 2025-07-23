@@ -28,10 +28,10 @@
   
   /* Custom colors for the design - Ocean Blue scheme */
   --primary-brown: 200 90% 65%;
-  --secondary-dark: 185 85% 55%;
+  --secondary-dark: 210 85% 60%;
   --accent-nude: 195 60% 90%;
   --hero-gradient-from: hsl(200, 90%, 65%);
-  --hero-gradient-to: hsl(185, 85%, 55%);
+  --hero-gradient-to: hsl(210, 85%, 60%);
   --surface: 195 40% 98%;
   
   /* Modern design elements */
@@ -84,7 +84,7 @@
   }
   
   .modern-hero-gradient {
-    background: linear-gradient(135deg, hsl(var(--secondary-dark)) 0%, hsl(var(--primary-brown)) 50%, hsl(190, 75%, 70%) 100%);
+    background: linear-gradient(135deg, hsl(var(--secondary-dark)) 0%, hsl(var(--primary-brown)) 50%, hsl(215, 80%, 70%) 100%);
   }
   
   .glass-card {
