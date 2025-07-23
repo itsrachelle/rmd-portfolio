@@ -651,7 +651,7 @@ export default function Home() {
                   Send a Message
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Tell me about your project and I'll get back to you within 24 hours.
+                  Tell me about your website
                 </p>
               </div>
               
