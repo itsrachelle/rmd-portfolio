@@ -28,10 +28,10 @@
   
   /* Custom colors for the design - Warm yellow scheme */
   --primary-brown: 45 95% 70%;
-  --secondary-dark: 50 90% 60%;
+  --secondary-dark: 50 85% 75%;
   --accent-nude: 55 100% 92%;
   --hero-gradient-from: hsl(45, 95%, 70%);
-  --hero-gradient-to: hsl(50, 90%, 60%);
+  --hero-gradient-to: hsl(50, 85%, 75%);
   --surface: 55 70% 98%;
   
   /* Modern design elements */
@@ -84,7 +84,7 @@
   }
   
   .modern-hero-gradient {
-    background: linear-gradient(135deg, hsl(var(--secondary-dark)) 0%, hsl(var(--primary-brown)) 50%, hsl(48, 85%, 75%) 100%);
+    background: linear-gradient(135deg, hsl(var(--secondary-dark)) 0%, hsl(var(--primary-brown)) 50%, hsl(48, 80%, 80%) 100%);
   }
   
   .glass-card {
