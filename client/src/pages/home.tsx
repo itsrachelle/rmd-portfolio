@@ -261,15 +261,17 @@ export default function Home() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="space-y-8 pt-20"
+            className="space-y-6 pt-20 overflow-visible"
           >
 
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-normal font-poppins leading-relaxed tracking-tight pb-6 pt-2">
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-white animate-text-shimmer bg-[length:200%_100%]">
-                Modern Website Design
-              </span>
-            </h1>
+            <div className="mb-8 py-4">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-normal font-poppins leading-[1.3] tracking-tight">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-white animate-text-shimmer bg-[length:200%_100%] py-2">
+                  Modern Website Design
+                </span>
+              </h1>
+            </div>
             
             <motion.p 
               initial={{ opacity: 0, y: 30 }}
