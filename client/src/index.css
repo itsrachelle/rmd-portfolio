@@ -27,9 +27,9 @@
   --radius: 0.5rem;
   
   /* Custom colors for the design - Ocean Blue scheme */
-  --primary-brown: 200 90% 65%;
-  --secondary-dark: 210 85% 60%;
-  --accent-nude: 195 60% 90%;
+  --primary-blue: 200 90% 65%;
+  --secondary-blue: 210 85% 60%;
+  --accent-blue: 195 60% 90%;
   --hero-gradient-from: hsl(200, 90%, 65%);
   --hero-gradient-to: hsl(210, 85%, 60%);
   --surface: 195 40% 98%;
@@ -84,7 +84,7 @@
   }
   
   .modern-hero-gradient {
-    background: linear-gradient(135deg, hsl(var(--secondary-dark)) 0%, hsl(var(--primary-brown)) 50%, hsl(215, 80%, 70%) 100%);
+    background: linear-gradient(135deg, hsl(var(--secondary-blue)) 0%, hsl(var(--primary-blue)) 50%, hsl(215, 80%, 70%) 100%);
   }
   
   .glass-card {
@@ -100,7 +100,7 @@
   }
   
   .text-gradient {
-    background: linear-gradient(135deg, hsl(var(--primary-brown)) 0%, hsl(var(--secondary-dark)) 100%);
+    background: linear-gradient(135deg, hsl(var(--primary-blue)) 0%, hsl(var(--secondary-blue)) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -115,7 +115,7 @@
   }
   
   .btn-modern {
-    @apply bg-gradient-to-r from-[hsl(var(--primary-brown))] to-[hsl(var(--secondary-dark))] text-white rounded-full px-8 py-4 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+    @apply bg-gradient-to-r from-[hsl(var(--primary-blue))] to-[hsl(var(--secondary-blue))] text-white rounded-full px-8 py-4 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl;
   }
   
   .section-modern {
