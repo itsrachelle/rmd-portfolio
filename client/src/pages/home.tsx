@@ -265,7 +265,7 @@ export default function Home() {
           >
 
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-normal font-poppins leading-tight tracking-tight pb-2">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-normal font-poppins leading-relaxed tracking-tight pb-6 pt-2">
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-white animate-text-shimmer bg-[length:200%_100%]">
                 Modern Website Design
               </span>
