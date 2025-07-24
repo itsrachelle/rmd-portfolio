@@ -47,7 +47,7 @@ export default function Home() {
 
   const navItems = [
     { href: "#about", label: "About" },
-    { href: "#pricing", label: "Services" },
+    { href: "#services", label: "Services" },
     { href: "#portfolio", label: "Portfolio" },
     { href: "#contact", label: "Contact" }
   ];
