@@ -66,7 +66,7 @@ export default function Home() {
   const pricingPlans = [
     {
       name: "One-Page Website",
-      price: "$200",
+      price: "$350",
       period: "",
       icon: FileText,
       description: "A sleek, modern one-page site designed to capture your brand essence and drive action.\n\nPerfect for small businesses, consultants, or personal brands just getting started online.",
