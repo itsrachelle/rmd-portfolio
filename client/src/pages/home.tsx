@@ -141,7 +141,7 @@ export default function Home() {
     setIsMenuOpen(false);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
@@ -153,18 +153,41 @@ export default function Home() {
       return;
     }
 
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    });
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      budget: "",
-      message: ""
-    });
+      const result = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for your message. I'll get back to you soon.",
+        });
+
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          budget: "",
+          message: ""
+        });
+      } else {
+        throw new Error(result.error || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Contact form error:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or email directly.",
+        variant: "destructive"
+      });
+    }
   };
 
   return (
