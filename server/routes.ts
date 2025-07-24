@@ -33,7 +33,7 @@ Message: ${message}
       // Send email using SendGrid
       const emailSent = await sendEmail({
         to: 'itsrachellenaomi@gmail.com',
-        from: 'contact@example.com', // Generic sender - needs to be verified in SendGrid
+        from: 'itsrachellenaomi@gmail.com', // Verified sender address
         subject: emailSubject,
         text: emailText,
         html: emailHtml
