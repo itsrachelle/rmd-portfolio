@@ -98,7 +98,7 @@ export default function Home() {
     },
     {
       name: "Website management*",
-      price: "$100",
+      price: "$200",
       period: "per month",
       icon: Settings,
       description: "Keep your site fresh, up-to-date, and running smoothly - without lifting a finger.",
