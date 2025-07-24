@@ -7,6 +7,9 @@
   
   # This will be your build command
   command = "npm run build"
+  
+  # Functions directory
+  functions = "netlify/functions"
 
 [[redirects]]
   from = "/*"
@@ -15,3 +18,4 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  SENDGRID_API_KEY = "${SENDGRID_API_KEY}"

@@ -154,7 +154,12 @@ export default function Home() {
     }
 
     try {
-      const response = await fetch('/api/contact', {
+      // Use Netlify function for production, Express API for development
+      const apiUrl = window.location.hostname === 'localhost' 
+        ? '/api/contact' 
+        : '/.netlify/functions/contact';
+        
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
