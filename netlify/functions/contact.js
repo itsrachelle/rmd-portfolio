@@ -1,7 +1,7 @@
 const { MailService } = require('@sendgrid/mail');
 
 const mailService = new MailService();
-mailService.setApiKey(process.env.SENDGRID_API_KEY);
+mailService.setApiKey(process.env.Test);
 
 exports.handler = async (event, context) => {
   // Only allow POST requests

@@ -18,4 +18,4 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  SENDGRID_API_KEY = "${SENDGRID_API_KEY}"
+  Test = "${Test}"
