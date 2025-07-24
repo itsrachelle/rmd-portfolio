@@ -6,6 +6,7 @@ import { sendEmail } from "./sendgrid";
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission route
   app.post("/api/contact", async (req, res) => {
+
     try {
       const { firstName, lastName, email, message } = req.body;
 
@@ -32,7 +33,7 @@ Message: ${message}
       // Send email using SendGrid
       const emailSent = await sendEmail({
         to: 'itsrachellenaomi@gmail.com',
-        from: 'itsrachellenaomi@gmail.com', // Using verified Gmail address
+        from: 'contact@example.com', // Generic sender - needs to be verified in SendGrid
         subject: emailSubject,
         text: emailText,
         html: emailHtml
