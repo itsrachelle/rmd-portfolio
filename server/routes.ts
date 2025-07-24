@@ -32,7 +32,7 @@ Message: ${message}
       // Send email using SendGrid
       const emailSent = await sendEmail({
         to: 'itsrachellenaomi@gmail.com',
-        from: 'noreply@yourwebsite.com', // This needs to be a verified sender in SendGrid
+        from: 'itsrachellenaomi@gmail.com', // Using verified Gmail address
         subject: emailSubject,
         text: emailText,
         html: emailHtml
