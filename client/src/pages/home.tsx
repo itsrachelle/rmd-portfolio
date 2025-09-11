@@ -601,9 +601,6 @@ export default function Home() {
               className="space-y-10"
             >
               <div className="space-y-8">
-                <h3 className="text-3xl font-normal font-poppins text-[hsl(var(--secondary-blue))] mb-8">
-                  Let's Start Your Project
-                </h3>
                 
                 <motion.div
                   initial={{ opacity: 0, y: -30 }}
