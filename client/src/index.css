@@ -185,6 +185,35 @@
     font-family: 'Space Grotesk', sans-serif;
   }
   
+  /* Elegant Cursive Fonts */
+  .font-allura {
+    font-family: 'Allura', cursive;
+  }
+  
+  .font-dancing-script {
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  .font-parisienne {
+    font-family: 'Parisienne', cursive;
+  }
+  
+  .font-alex-brush {
+    font-family: 'Alex Brush', cursive;
+  }
+  
+  .font-pinyon-script {
+    font-family: 'Pinyon Script', cursive;
+  }
+  
+  .font-great-vibes {
+    font-family: 'Great Vibes', cursive;
+  }
+  
+  .font-tangerine {
+    font-family: 'Tangerine', cursive;
+  }
+  
   .perspective-1000 {
     perspective: 1000px;
   }
