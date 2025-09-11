@@ -169,6 +169,22 @@
     font-family: 'Poppins', sans-serif;
   }
   
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-dm-sans {
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  .font-space-grotesk {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
   .perspective-1000 {
     perspective: 1000px;
   }
