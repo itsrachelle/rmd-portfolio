@@ -48,6 +48,12 @@ export default function Home() {
       description: "5-page site with blog, contact, and embedded subscription option.",
       image: stretchInspireScreenshot,
       liveUrl: "https://www.stretchinspire.com/"
+    },
+    {
+      companyName: "Vaanaa Cafe",
+      description: "Modern cafe website with elegant design and smooth user experience.",
+      image: tempImageQe40RA, // Using existing placeholder image
+      liveUrl: "https://vaanaa-cafe-draft.replit.app"
     }
   ];
 
