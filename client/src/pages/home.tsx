@@ -582,14 +582,12 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-20"
+            className="text-center mb-8"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal font-poppins text-[hsl(var(--secondary-blue))] mb-6 leading-none">
               <span className="text-gradient">Let's Start Your Project</span>
             </h2>
-            <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
-              Ready to create your website? Let's discuss how I can help bring your vision to life!
-            </p>
+            <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">Ready to create your website? Let's discuss how we can help bring your vision to life!</p>
           </motion.div>
 
           <div className="max-w-4xl mx-auto text-center">
