@@ -137,8 +137,7 @@ export default function Home() {
         <div className="container mx-auto px-6 py-5">
           <div className="flex justify-between items-center">
             <div className="text-3xl font-normal font-poppins tracking-tight leading-relaxed">
-              <span className="text-gradient">Design</span>
-              <span className="text-[hsl(var(--secondary-blue))]">Pro</span>
+              <span className="text-gradient">The Web Studio</span>
             </div>
             
             {/* Desktop Navigation */}
@@ -231,7 +230,7 @@ export default function Home() {
             <div className="mb-8 py-4">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-normal font-poppins leading-[1.3] tracking-tight">
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-white animate-text-shimmer bg-[length:200%_100%] py-2">
-                  Modern Website Design
+                  The Web Studio
                 </span>
               </h1>
             </div>
@@ -634,7 +633,7 @@ export default function Home() {
               className="mb-12"
             >
               <div className="text-5xl font-normal font-poppins mb-6">
-                <span className="text-gradient">Design</span>Pro
+                <span className="text-gradient">The Web Studio</span>
               </div>
               <p className="text-xl text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">
                 Creating beautiful, functional websites that drive results and elevate your brand.
@@ -674,7 +673,7 @@ export default function Home() {
                 transition={{ delay: 0.4 }}
                 className="text-gray-400 text-lg font-light"
               >
-                © 2025 DesignPro. All rights reserved.
+                © 2025 The Web Studio. All rights reserved.
               </motion.p>
             </div>
           </div>

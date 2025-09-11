@@ -140,7 +140,7 @@ Content approach: Clean, streamlined design focused on core services without unn
 - ✅ Successfully deployed with "Test" environment variable for SendGrid API key
 
 ### Typography & Design Fixes
-- ✅ Resolved recurring 'g' cutoff issue in "Modern Website Design" heading with leading-[1.3] and padding adjustments
+- ✅ Resolved recurring 'g' cutoff issue in "The Web Studio" heading with leading-[1.3] and padding adjustments
 - ✅ Optimized photo sizing for responsive breakpoints
 - ✅ Maintained warm nude/brown color scheme with Poppins font
 
