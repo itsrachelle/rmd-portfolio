@@ -613,7 +613,6 @@ export default function Home() {
                     <Mail className="h-7 w-7 text-white" />
                   </div>
                   <div className="text-center">
-                    <h4 className="text-xl font-normal font-poppins text-[hsl(var(--secondary-blue))] mb-2">Email</h4>
                     <p className="text-lg font-medium text-gray-800 mb-1">thewebstudio.live@gmail.com</p>
                     <p className="text-sm text-gray-500">Email us for a free consultation</p>
                   </div>
