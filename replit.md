@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a modern, responsive 1-page portfolio website for web design services, successfully deployed at modernwebsitedesigns.netlify.app. Built with React, Express.js, and TypeScript, it features a professional landing page with navigation (About, Services, Portfolio, Contact), smooth scrolling, and a fully functional contact form that emails submissions to itsrachellenaomi@gmail.com using SendGrid. The site uses a warm nude and brown color scheme with Poppins typography for an inviting, modern aesthetic.
+This is a modern, responsive 1-page portfolio website for web design services, successfully deployed at modernwebsitedesigns.netlify.app. Built with React, Express.js, and TypeScript, it features a professional landing page with navigation (About, Services, Portfolio, Contact), smooth scrolling, and a fully functional contact form that emails submissions to thewebstudio.live@gmail.com using SendGrid. The site uses a warm nude and brown color scheme with Poppins typography for an inviting, modern aesthetic.
 
 ## User Preferences
 
@@ -147,6 +147,6 @@ Content approach: Clean, streamlined design focused on core services without unn
 ### Production Deployment
 - ✅ Successfully deployed to modernwebsitedesigns.netlify.app
 - ✅ Contact form fully functional on live site
-- ✅ All emails routing to itsrachellenaomi@gmail.com
+- ✅ All emails routing to thewebstudio.live@gmail.com
 
 The application is designed for easy deployment on platforms like Replit and Netlify, with automatic database provisioning and a single-command build process. The architecture supports both development flexibility and production scalability.

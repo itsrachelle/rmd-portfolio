@@ -40,8 +40,8 @@ Message: ${message}
 
     // Send email using SendGrid
     await mailService.send({
-      to: 'itsrachellenaomi@gmail.com',
-      from: 'itsrachellenaomi@gmail.com',
+      to: 'thewebstudio.live@gmail.com',
+      from: 'thewebstudio.live@gmail.com',
       subject: emailSubject,
       text: emailText,
       html: emailHtml

@@ -613,7 +613,7 @@ export default function Home() {
                   </div>
                   <div className="text-center">
                     <h4 className="text-xl font-normal font-poppins text-[hsl(var(--secondary-blue))] mb-2">Email</h4>
-                    <p className="text-lg font-medium text-gray-800 mb-1">itsrachellenaomi@gmail.com</p>
+                    <p className="text-lg font-medium text-gray-800 mb-1">thewebstudio.live@gmail.com</p>
                     <p className="text-sm text-gray-500">Drop me a line anytime</p>
                   </div>
                 </motion.div>

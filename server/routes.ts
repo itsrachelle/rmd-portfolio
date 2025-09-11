@@ -32,8 +32,8 @@ Message: ${message}
 
       // Send email using SendGrid
       const emailSent = await sendEmail({
-        to: 'itsrachellenaomi@gmail.com',
-        from: 'itsrachellenaomi@gmail.com', // Verified sender address
+        to: 'thewebstudio.live@gmail.com',
+        from: 'thewebstudio.live@gmail.com', // Verified sender address
         subject: emailSubject,
         text: emailText,
         html: emailHtml
