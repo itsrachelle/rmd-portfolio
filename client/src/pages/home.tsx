@@ -28,6 +28,7 @@ import {
 
 import tempImageQe40RA from "@assets/tempImageQe40RA.png";
 import stretchInspireScreenshot from "@assets/Screenshot 2025-07-22 at 14.22.05_1753208599743.png";
+import vaanaaCafeScreenshot from "@assets/Screenshot 2025-09-11 at 13.41.44_1757612531277.png";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,7 +53,7 @@ export default function Home() {
     {
       companyName: "Vaanaa Cafe",
       description: "Modern cafe website with elegant design and smooth user experience.",
-      image: tempImageQe40RA, // Using existing placeholder image
+      image: vaanaaCafeScreenshot,
       liveUrl: "https://vaanaa-cafe-draft.replit.app"
     }
   ];
