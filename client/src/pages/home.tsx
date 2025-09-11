@@ -515,7 +515,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="flex justify-center gap-8">
+          <div className="flex flex-col md:flex-row justify-center gap-8">
             {portfolioItems.map((item, index) => (
               <motion.div
                 key={item.companyName}
