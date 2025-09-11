@@ -143,7 +143,7 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-xl border-0 shadow-lg z-50 transition-all duration-300">
         <div className="container mx-auto px-6 py-5">
           <div className="flex justify-between items-center">
-            <div className="text-3xl font-normal font-poppins tracking-tight leading-relaxed">
+            <div className="text-3xl font-normal font-playfair tracking-tight leading-relaxed">
               <span className="text-gradient">The Web Studio</span>
             </div>
             
@@ -321,7 +321,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="text-center mb-20"
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal font-poppins text-[hsl(var(--secondary-blue))] mb-6 leading-none">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal font-playfair text-[hsl(var(--secondary-blue))] mb-6 leading-none">
                 About <span className="text-gradient">Me</span>
               </h2>
               <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
@@ -374,7 +374,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal font-poppins text-[hsl(var(--secondary-blue))] mb-6 leading-none">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal font-playfair text-[hsl(var(--secondary-blue))] mb-6 leading-none">
               <span className="text-gradient">Services</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
@@ -405,12 +405,12 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  <h3 className="text-2xl font-normal font-poppins text-[hsl(var(--secondary-blue))] mb-4">
+                  <h3 className="text-2xl font-normal font-playfair text-[hsl(var(--secondary-blue))] mb-4">
                     {plan.name}
                   </h3>
                   
                   <div className="mb-6">
-                    <span className="text-2xl md:text-3xl font-normal font-poppins text-gradient">
+                    <span className="text-2xl md:text-3xl font-normal font-playfair text-gradient">
                       {plan.price}
                     </span>
                     {plan.period && <span className="text-base font-medium text-gray-500 ml-2">{plan.period}</span>}
@@ -427,7 +427,7 @@ export default function Home() {
                   )}
                   
                   <div className="text-left mb-6">
-                    <h4 className="font-normal font-poppins text-[hsl(var(--secondary-blue))] mb-4 text-base">
+                    <h4 className="font-normal font-playfair text-[hsl(var(--secondary-blue))] mb-4 text-base">
                       {plan.name === "Basic 3–5 Page Website" ? "What's included:" : "Includes:"}
                     </h4>
                     <ul className="space-y-3">
@@ -473,7 +473,7 @@ export default function Home() {
                 <div className="w-12 h-12 bg-gradient-to-r from-[hsl(var(--primary-blue))] to-[hsl(var(--secondary-blue))] rounded-2xl flex items-center justify-center">
                   <Star className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-3xl font-normal font-poppins text-[hsl(var(--secondary-blue))]">
+                <h3 className="text-3xl font-normal font-playfair text-[hsl(var(--secondary-blue))]">
                   Need something <span className="text-gradient">custom?</span>
                 </h3>
               </div>
@@ -507,7 +507,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal font-poppins text-[hsl(var(--secondary-blue))] mb-6 leading-none">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal font-playfair text-[hsl(var(--secondary-blue))] mb-6 leading-none">
               <span className="text-gradient">Portfolio</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
@@ -584,7 +584,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-8"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal font-poppins text-[hsl(var(--secondary-blue))] mb-6 leading-none">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal font-playfair text-[hsl(var(--secondary-blue))] mb-6 leading-none">
               <span className="text-gradient">Let's Start Your Project</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">Ready to create your website? Let's discuss how we can help bring your vision to life!</p>
@@ -636,7 +636,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="mb-12"
             >
-              <div className="text-5xl font-normal font-poppins mb-6">
+              <div className="text-5xl font-normal font-playfair mb-6">
                 <span className="text-gradient">The Web Studio</span>
               </div>
               <p className="text-xl text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">
