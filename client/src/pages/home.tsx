@@ -246,9 +246,7 @@ export default function Home() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2, duration: 0.6 }}
                 className="inline-block"
-              >
-                Fast, functional, and beautifully designed websites - ready in just days.
-              </motion.span>
+              >Fast, functional, and beautifully designed websites.</motion.span>
             </motion.p>
             
             <motion.div
