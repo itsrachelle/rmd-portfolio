@@ -3,10 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useToast } from "@/hooks/use-toast";
 import { 
   Monitor, 
   Smartphone, 
@@ -36,14 +32,6 @@ import stretchInspireScreenshot from "@assets/Screenshot 2025-07-22 at 14.22.05_
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    budget: "",
-    message: ""
-  });
-  const { toast } = useToast();
 
   const navItems = [
     { href: "#about", label: "About" },
@@ -141,59 +129,6 @@ export default function Home() {
     setIsMenuOpen(false);
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
-      toast({
-        title: "Missing Information",
-        description: "Please fill in all required fields.",
-        variant: "destructive"
-      });
-      return;
-    }
-
-    try {
-      // Use Netlify function for production, Express API for development
-      const apiUrl = window.location.hostname === 'localhost' 
-        ? '/api/contact' 
-        : '/.netlify/functions/contact';
-        
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        toast({
-          title: "Message Sent!",
-          description: "Thank you for your message. I'll get back to you soon.",
-        });
-
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          budget: "",
-          message: ""
-        });
-      } else {
-        throw new Error(result.error || 'Failed to send message');
-      }
-    } catch (error) {
-      console.error('Contact form error:', error);
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again or email directly.",
-        variant: "destructive"
-      });
-    }
-  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -653,10 +588,10 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="space-y-10"
@@ -667,104 +602,22 @@ export default function Home() {
                 </h3>
                 
                 <motion.div
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: -30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className="flex items-start gap-6 group"
+                  className="flex items-center justify-center gap-6 group"
                 >
                   <div className="w-14 h-14 bg-gradient-to-r from-[hsl(var(--primary-blue))] to-[hsl(var(--secondary-blue))] rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
                     <Mail className="h-7 w-7 text-white" />
                   </div>
-                  <div className="flex-1">
+                  <div className="text-center">
                     <h4 className="text-xl font-normal font-poppins text-[hsl(var(--secondary-blue))] mb-2">Email</h4>
                     <p className="text-lg font-medium text-gray-800 mb-1">itsrachellenaomi@gmail.com</p>
                     <p className="text-sm text-gray-500">Drop me a line anytime</p>
                   </div>
                 </motion.div>
               </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="card-modern p-10"
-            >
-              <div className="mb-8">
-                <h3 className="text-3xl font-normal font-poppins text-[hsl(var(--secondary-blue))] mb-4">
-                  Send a Message
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Tell me about your website needs.
-                </p>
-              </div>
-              
-              <form onSubmit={handleSubmit} className="space-y-8">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-[hsl(var(--secondary-blue))] mb-2">
-                      First Name *
-                    </label>
-                    <Input
-                      type="text"
-                      value={formData.firstName}
-                      onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                      className="w-full"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-[hsl(var(--secondary-blue))] mb-2">
-                      Last Name *
-                    </label>
-                    <Input
-                      type="text"
-                      value={formData.lastName}
-                      onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                      className="w-full"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-[hsl(var(--secondary-blue))] mb-2">
-                    Email *
-                  </label>
-                  <Input
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full"
-                    required
-                  />
-                </div>
-
-
-
-                <div>
-                  <label className="block text-sm font-medium text-[hsl(var(--secondary-blue))] mb-2">
-                    Message *
-                  </label>
-                  <Textarea
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Describe the type of website you would like to create in as much detail as possible"
-                    className="w-full min-h-[120px]"
-                    required
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  className="w-full btn-modern text-lg py-4 px-8 font-bold shadow-xl group hover:shadow-2xl"
-                >
-                  Send Message
-                  <ArrowRight className="h-5 w-5 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
-                </Button>
-              </form>
             </motion.div>
           </div>
         </div>
