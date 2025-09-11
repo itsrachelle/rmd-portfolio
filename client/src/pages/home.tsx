@@ -611,7 +611,12 @@ export default function Home() {
                     <Mail className="h-7 w-7 text-white" />
                   </div>
                   <div className="text-center">
-                    <p className="text-lg font-medium text-gray-800 mb-1">thewebstudio.live@gmail.com</p>
+                    <a 
+                      href="mailto:thewebstudio.live@gmail.com" 
+                      className="text-lg font-medium text-[hsl(var(--primary-blue))] hover:text-[hsl(var(--secondary-blue))] mb-1 transition-colors duration-300 hover:underline"
+                    >
+                      thewebstudio.live@gmail.com
+                    </a>
                     <p className="text-sm text-gray-500">Email us for a free consultation</p>
                   </div>
                 </motion.div>
