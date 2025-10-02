@@ -58,7 +58,7 @@ export default function Home() {
       liveUrl: "https://vaanaa-cafe-draft.replit.app"
     },
     {
-      companyName: "S.H.E. (hershe360)",
+      companyName: "S.H.E.",
       description: "Empowerment coaching website for women focused on self-love, healing, and personal evolution.",
       image: hershe360Screenshot,
       liveUrl: "https://hershe360.com"
