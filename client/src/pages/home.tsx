@@ -83,7 +83,7 @@ export default function Home() {
     },
     {
       name: "3–5 Page Website",
-      price: "$400 - $600",
+      price: "$500 - $700",
       period: "",
       icon: Globe,
       description: "A fully customized website (up to 5 pages) to showcase your brand and convert visitors.",
