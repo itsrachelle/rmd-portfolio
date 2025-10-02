@@ -53,7 +53,7 @@ export default function Home() {
     },
     {
       companyName: "Vaanaa Cafe",
-      description: "single page modern cafe website with elegant design and smooth user experience.",
+      description: "Single page modern cafe website with elegant design and smooth user experience.",
       image: vaanaaCafeScreenshot,
       liveUrl: "https://vaanaa-cafe-draft.replit.app"
     },
