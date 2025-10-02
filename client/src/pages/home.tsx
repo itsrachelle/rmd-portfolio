@@ -29,7 +29,7 @@ import {
 import tempImageQe40RA from "@assets/tempImageQe40RA.png";
 import stretchInspireScreenshot from "@assets/Screenshot 2025-07-22 at 14.22.05_1753208599743.png";
 import vaanaaCafeScreenshot from "@assets/Screenshot 2025-09-11 at 13.41.44_1757612531277.png";
-import hershe360Screenshot from "@assets/Screenshot 2025-10-02 at 01.10.02_1759381815436.png";
+import hershe360Screenshot from "@assets/Screenshot 2025-10-02 at 01.11.24_1759381902640.png";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
