@@ -47,13 +47,13 @@ export default function Home() {
   const portfolioItems = [
     {
       companyName: "Stretch Inspire BLOG",
-      description: "5-page site with blog, contact, and embedded subscription option.",
+      description: "5-page site with blog, contact, and embedded subscription option",
       image: stretchInspireScreenshot,
       liveUrl: "https://www.stretchinspire.com/"
     },
     {
       companyName: "Vaanaa Cafe",
-      description: "Single page modern cafe website with elegant design and smooth user experience.",
+      description: "Single page modern cafe website with elegant design and smooth user experience",
       image: vaanaaCafeScreenshot,
       liveUrl: "https://vaanaa-cafe-draft.replit.app"
     },
