@@ -53,13 +53,13 @@ export default function Home() {
     },
     {
       companyName: "Vaanaa Cafe",
-      description: "Modern cafe website with elegant design and smooth user experience.",
+      description: "single page modern cafe website with elegant design and smooth user experience.",
       image: vaanaaCafeScreenshot,
       liveUrl: "https://vaanaa-cafe-draft.replit.app"
     },
     {
       companyName: "S.H.E.",
-      description: "Empowerment coaching website for women focused on self-love, healing, and personal evolution.",
+      description: "4-page responsive informational website with animations and consistent brand colour integration",
       image: hershe360Screenshot,
       liveUrl: "https://hershe360.com"
     }
