@@ -29,6 +29,7 @@ import {
 import tempImageQe40RA from "@assets/tempImageQe40RA.png";
 import stretchInspireScreenshot from "@assets/Screenshot 2025-07-22 at 14.22.05_1753208599743.png";
 import vaanaaCafeScreenshot from "@assets/Screenshot 2025-09-11 at 13.41.44_1757612531277.png";
+import hershe360Screenshot from "@assets/stock_images/empowering_women_wel_6106d7d3.jpg";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,6 +56,12 @@ export default function Home() {
       description: "Modern cafe website with elegant design and smooth user experience.",
       image: vaanaaCafeScreenshot,
       liveUrl: "https://vaanaa-cafe-draft.replit.app"
+    },
+    {
+      companyName: "S.H.E. (hershe360)",
+      description: "Empowerment coaching website for women focused on self-love, healing, and personal evolution.",
+      image: hershe360Screenshot,
+      liveUrl: "https://hershe360.com"
     }
   ];
 
