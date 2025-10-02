@@ -89,7 +89,7 @@ export default function Home() {
       description: "A fully customized website (up to 5 pages) to showcase your brand and convert visitors.",
       features: [
         "Website setup and design",
-        "Up to 5 pages (e.g., Home, Services/Menu, About, Contact, Blog, Booking)",
+        "Up to 5 pages (e.g., Home, About, Services/Menu, Gallery/Portfolio, Contact)",
         "Full website setup and design",
         "Brand Integration",
         "Mobile-friendly design",
